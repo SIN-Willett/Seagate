@@ -1,11 +1,8 @@
-__**!downtime service**__
-
+## !downtime service
 `!downtime service` is used for the Service Downtime and use of it looks like: `!downtime service <God> [arguments]`
 
-For example:
+#### For example:
+`!downtime service Ioun adv guid`  
+`!downtime service "Deep Sashelas" adv`  
 
-`!downtime service Ioun adv guid`
-
-`!downtime service "Deep Sashelas" adv`
-
-*You must specify who the Service Downtime is to as <god>*
+- Note: *You must specify who the Service Downtime is to as <god>*
