@@ -1,4 +1,6 @@
-embed <drac2>
+tembed
+{{get_gvar("9ff58408-c332-439e-9cf1-916046e3971b")}}
+<drac2>
 args = &ARGS&
 downtime_name = str(args[0])
 dc = int(args[1])
@@ -9,62 +11,7 @@ expertise = "exp" in args
 all_downtimes = load_json(get_gvar("0d55e007-c9c3-43c8-b5b3-051353ed8797"))
 our_downtime = all_downtimes[downtime_name]
 
-stats = {
-    "Dice set":               {"is_tool": True, "mod":charismaMod},
-    "Playing card set":       {"is_tool": True, "mod":charismaMod},
-    "Bagpipes":               {"is_tool": True, "mod":charismaMod},
-    "Drum":                   {"is_tool": True, "mod":charismaMod},
-    "Dulcimer":               {"is_tool": True, "mod":charismaMod},
-    "Lute":                   {"is_tool": True, "mod":charismaMod},
-    "Flute":                  {"is_tool": True, "mod":charismaMod},
-    "Lyre":                   {"is_tool": True, "mod":charismaMod},
-    "Horn":                   {"is_tool": True, "mod":charismaMod},
-    "Pan flute":              {"is_tool": True, "mod":charismaMod},
-    "Shawm":                  {"is_tool": True, "mod":charismaMod},
-    "Viol":                   {"is_tool": True, "mod":charismaMod},
-    "Cobbler's tools":        {"is_tool": True, "mod":dexterityMod},
-    "Disguise Kit":           {"is_tool": True, "mod":dexterityMod},
-    "Glassblower's tools":    {"is_tool": True, "mod":dexterityMod},
-    "Jeweler's tools":        {"is_tool": True, "mod":dexterityMod},
-    "Potter's tools":         {"is_tool": True, "mod":dexterityMod},
-    "Tinker's tools":         {"is_tool": True, "mod":dexterityMod},
-    "Thieves' tools":         {"is_tool": True, "mod":dexterityMod},
-    "Weaver's tools":         {"is_tool": True, "mod":dexterityMod},
-    "Woodcarver's tools":     {"is_tool": True, "mod":dexterityMod},
-    "Alchemist's supplies":   {"is_tool": True, "mod":intelligenceMod},
-    "Calligrapher's supplies":{"is_tool": True, "mod":intelligenceMod},
-    "Cartographer's tools":   {"is_tool": True, "mod":intelligenceMod},
-    "Poisoner's Kit":         {"is_tool": True, "mod":intelligenceMod},
-    "Carpenter's tools":      {"is_tool": True, "mod":strengthMod},
-    "Leatherworker's tools":  {"is_tool": True, "mod":strengthMod},
-    "Mason's tools":          {"is_tool": True, "mod":strengthMod},
-    "Smith's tools":          {"is_tool": True, "mod":strengthMod},
-    "Land Vehicles":          {"is_tool": True, "mod":strengthMod},
-    "Water Vehicles":         {"is_tool": True, "mod":strengthMod},
-    "Brewer's supplies":      {"is_tool": True, "mod":wisdomMod},
-    "Cook's utensils":        {"is_tool": True, "mod":wisdomMod},
-    "Herbalism Kit":          {"is_tool": True, "mod":wisdomMod},
-    "Painter's supplies":     {"is_tool": True, "mod":wisdomMod},
-    "Navigator's tools":      {"is_tool": True, "mod":wisdomMod},
-    "Performance":            {"is_tool": False, "mod":character().skills.performance.value},
-    "History":                {"is_tool": False, "mod":character().skills.history.value},
-    "Persuasion":             {"is_tool": False, "mod":character().skills.persuasion.value},
-    "Arcana":                 {"is_tool": False, "mod":character().skills.arcana.value},
-    "Athletics":              {"is_tool": False, "mod":character().skills.athletics.value},
-    "Investigation":          {"is_tool": False, "mod":character().skills.investigation.value},
-    "Acrobatics":             {"is_tool": False, "mod":character().skills.acrobatics.value},
-    "Animal Handling":        {"is_tool": False, "mod":character().skills.animalHandling.value},
-    "Perception":             {"is_tool": False, "mod":character().skills.perception.value},
-    "Nature":                 {"is_tool": False, "mod":character().skills.nature.value},
-    "Sleight of Hand":        {"is_tool": False, "mod":character().skills.sleightOfHand.value},
-    "Survival":               {"is_tool": False, "mod":character().skills.survival.value},
-    "Stealth":                {"is_tool": False, "mod":character().skills.stealth.value},
-    "Medicine":               {"is_tool": False, "mod":character().skills.medicine.value},
-    "Insight":                {"is_tool": False, "mod":character().skills.insight.value},
-    "Religion":               {"is_tool": False, "mod":character().skills.religion.value},
-    "Deception":              {"is_tool": False, "mod":character().skills.deception.value},
-    "Intimidation":           {"is_tool": False, "mod":character().skills.intimidation.value}
-}
+stats = load_json(get("stats"))
  
 mods = []
 checks = []
