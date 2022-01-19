@@ -1,0 +1,49 @@
+{
+  "academic":  [
+    ["Arcana", "History", "Nature"],
+    ["Investigation", "Alchemist's Supplies", "Calligrapher's Tools"]
+  ],
+
+  "herd":  [
+    ["Athletics", "Animal Handling"],
+    ["Intimidation"]
+  ],
+
+  "horse":  [
+    ["Athletics", "Acrobatics"],
+    ["Animal Handling"]
+  ],
+
+  "hunt":  [
+    ["Survival"],
+    ["Stealth"]
+  ],
+
+  "gather":  [
+    ["Perception"],
+    ["Nature"]
+  ],
+
+  "street": [
+    ["Performance", "History"],
+    ["Persuasion", "Bagpipes", "Drum", "Dulcimer", "Lute", "Flute", "Lyre", "Horn", "Pan flute", "Shawm", "Viol"]
+  ],
+
+  "banditry":  [
+    ["Athletics", "Acrobatics"],
+    ["Land Vehicles"],
+    ["Deception", "Intimidation"]
+  ],
+
+  "crime":  [
+    ["Stealth"],
+    ["Thieves' Tools", "Sleight of Hand"],
+    ["Deception", "Investigation","Perception"]
+  ],
+
+  "piracy":  [
+    ["Athletics", "Acrobatics"],
+    ["Water Vehicles"],
+    ["Deception", "Intimidation"]
+  ]
+}
