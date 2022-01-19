@@ -1,0 +1,14 @@
+{
+  "legal": [
+    "You earn no gold and no experience.",
+    "You earn half the amount of gold and experience associated with your chosen DC.",
+    "You earn the full amount of gold and experience associated with your chosen DC!"
+  ],
+  
+  "illegal": [
+    "You are now wanted for a DC {wantedDC} crime! Ping a moderator, and let an admin know to add you to the wanted board.",
+    "You are now wanted for your crimes! Ping a moderator, and let an admin know to add you to the wanted board.",
+    "You earn 15 xp and half the gold reward.",
+    "You earn 30 xp and the full gold reward!"
+  ]
+}
