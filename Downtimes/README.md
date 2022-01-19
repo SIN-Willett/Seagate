@@ -36,3 +36,14 @@
 
 `-role`|`-title`  
 > This wants you to put both the job role and an appropriate article such as "the Owner" or "a member"  
+
+## !beloved
+This is a two part alias, part one sets up the counter and modifies it, part two uses the counter once  
+
+`!beloved set <#>` *will set up the counter for you or update your counter and automatically caps at proficiency bonus*  
+
+`!beloved` *will expend one use of Beloved Inspiration.*  
+
+### Using the beloved snippet
+On any command that uses snippets you can use the beloved snippet to spend the counter, note this snippet does not tell it to roll adv, you must still use the adv snippet, which looks like this:  
+`!c stealth beloved adv` or `!s con beloved adv`
