@@ -1,10 +1,10 @@
-embed <drac2>
-args = &ARGS&
+<drac2>
+args = &&&
 data = load_json(get_gvar("100f2682-77af-4982-bd1a-cc155b93f262"))
 VIPtrainings = load_json(get_gvar("81eb4ed1-4118-4f00-a6f0-4f7e9a070103"))
 cc = "Progress"
 par = argparse(args[1:])
-arg = args[0] if args else None
+arg = args[1] if args else None
 
 chosen = None
 chosen_category = None
@@ -20,32 +20,26 @@ for category, trainings in data.items():
 if not chosen:
     err("could not find training modifier")
 
+mydice = ""
+
+stats = load_json(get("stats"))
+p_tools = get('pTools','').lower()
+
+if "adv" in args:
+    mydice += f"2d20kh1+{stats[chosen].mod}"
+elif "dis" in args:
+    mydice += f"2d20kl1+{stats[chosen].mod}"
+else:
+    mydice += f"1d20+{stats[chosen].mod}"
+
 actions = 0
-if "exp" in args and chosen in VIPtrainings:
+
+if ("exp" in args and chosen in VIPtrainings) or (chosen.lower() in p_tools and chosen in VIPtrainings):
     actions = 28 - (intelligenceMod * 2) if intelligenceMod > 0 else 28
+    mydice += "+" + proficiencyBonus
 else:
     actions = 14 - intelligenceMod if intelligenceMod > 0 else 14
 
-stats = {
-    "strength":strengthMod,
-    "dexterity":dexterityMod,
-    "intelligence":intelligenceMod,
-    "wisdom":wisdomMod,
-    "charisma":charismaMod,
-    "athletics":character().skills.athletics.value,
-}
-
-mydice = ""
-
-if "adv" in args:
-    mydice += f"2d20kh1+{stats[chosen_category]}"
-elif "dis" in args:
-    mydice += f"2d20kl1+{stats[chosen_category]}"
-else:
-    mydice += f"1d20+{stats[chosen_category]}"
-    
-if "exp" in args and chosen in VIPtrainings:
-    mydice += "+" + proficiencyBonus
 if "guid" in args:
     mydice += "+1d4[guidance]"
 if "ls" in args and chosen_category != "athletics":
