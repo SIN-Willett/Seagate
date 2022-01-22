@@ -1,9 +1,9 @@
-embed
+# Gvar 4bd5ceb6-e82f-4196-be25-988c6c4e2a3d
 <drac2>
-args = &ARGS&
+args = &&&
 ##gvar for items 1st dict "Magic", 2nd dict "Mundane"
 craftables = load_json(get_gvar("c28ac8be-d70e-4842-8f5c-b9e251ce4eb6"))
-inputcraft = args[0]
+inputcraft = args[1]
 crafting_details = None
 item_name = None
 crafting_type = None
@@ -50,13 +50,6 @@ else:
     tool    = crafting_details.tool
     actions = ceil(price / 10)
 
-checks = {
-	"Charisma"		: charismaMod,
-	"Dexterity"		: dexterityMod,
-	"Intelligence"	: intelligenceMod,
-	"Strength"		: strengthMod,
-	"Wisdom"		: wisdomMod
-}
 cc = "Crafting: " + item_name
 ##makes counter if it doesn't already exist
 if actions < 1:
@@ -66,13 +59,10 @@ if get_cc(cc) == actions:
     character().set_cc(cc, 0)
     
 ##gvar for tool to attribute matching
-tools = load_json(get_gvar("75e74d5e-c3a5-4056-9590-55634284b807"))
-stat = tools[tool.lower()]
-mystat = checks[stat]
+stats = load_json(get("stats"))
+mod = stats[tool].mod
 arcana = character().skills.arcana.bonus + (character().skills.arcana.prof * proficiencyBonus)
 magic_response = None
-
-mod = mystat
         
 artificer_level = 0
 for (cls, level) in character().levels:

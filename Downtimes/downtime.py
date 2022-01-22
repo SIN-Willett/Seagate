@@ -1,6 +1,7 @@
-tembed
-{{get_gvar("9ff58408-c332-439e-9cf1-916046e3971b")}}
+# Gvar b586e078-f4e8-4bc8-bf8c-292dcd42f447
 <drac2>
+if not get("stats"):
+    err("Stats not set")
 args = &ARGS&
 downtime_name = str(args[0])
 dc = int(args[1])

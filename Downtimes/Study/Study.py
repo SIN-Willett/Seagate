@@ -1,20 +1,21 @@
-embed <drac2>
-args = &ARGS&
+# Gvar 97d2dddb-2116-41e3-a312-44351619d3eb
+<drac2>
+args = &&&
 listy = load_json(get_gvar("42ca55a5-199c-42e9-b89b-2f903a626b02"))
 
-if len(args) > 2 or len(args) == 0:
-    err("!help study")
-if len(args) == 1:
+if len(args) > 3 or len(args) == 1:
+    err("!help downtime study")
+if len(args) == 2:
     err("Don't forget to add how many hours you are studying " + args[0])
-if not args[1].isnumeric():
-    err(args[1] + " is not a valid amount of hours to study")
+if not args[2].isnumeric():
+    err(args[2] + " is not a valid amount of hours to study")
 
-learning = args[0].lower()
-study_hours = int(args[1])
+learning = args[1].lower()
+study_hours = int(args[2])
 
 possibilities = [(topics, hours) for (topics, hours) in listy.items() if learning in topics.lower()]
 if not possibilities:
-    err(args[0] + " isn't a valid thing to study")
+    err(args[1] + " isn't a valid thing to study")
 study = possibilities[0][0]
 max_hours = possibilities [0][1]
 

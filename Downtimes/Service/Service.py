@@ -1,17 +1,18 @@
-embed <drac2>
-args = &ARGS&
+# Gvar e55f5a53-b70a-484d-a386-6acc350d2c0d
+<drac2>
+args = &&&
 
 if not args:
     err("Please clarify who you're giving Service to!")
-if (args[0] == "adv") or (args[0] == "guid"):
+if (args[1] == "adv") or (args[1] == "guid"):
     err("Please clarify who you're giving Service to before arguements!")
 
-who = args[0]
+who = args[1]
 
 mydice = ""
 if "adv" in args:
     mydice += f"2d20kh1+{character().skills.religion.value}"
-if "dis" in args:
+elif "dis" in args:
     mydice += f"2d20kl1+{character().skills.religion.value}"
 else:
     mydice += f"1d20+{character().skills.religion.value}"
@@ -35,7 +36,6 @@ elif myroll.result.total <= 20:
     response = possiblities[3]
 else:
     response = possiblities[4]
-    
 </drac2>
 -title "{{name}} {{title}}"
 -desc "{{output_text}}"
