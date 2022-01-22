@@ -4,7 +4,7 @@ args = &&&
 listy = load_json(get_gvar("42ca55a5-199c-42e9-b89b-2f903a626b02"))
 
 if len(args) > 3 or len(args) == 1:
-    err("!help downtime study")
+    err("You've forgotten a few things here")
 if len(args) == 2:
     err("Don't forget to add how many hours you are studying " + args[0])
 if not args[2].isnumeric():

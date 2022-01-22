@@ -20,6 +20,7 @@ if not chosen_training:
 if training_tool == False:
     err("" + chosen_training + " is a skill, you can't train in skills friend.")
 
+
 mydice = ""
 p_tools = get('pTools','').lower()
 
@@ -31,18 +32,41 @@ else:
     mydice += f"1d20+{stats[chosen_training].mod}"
 
 actions = 0
+cost = 0
 VIPtrainings = load_json(get_gvar("81eb4ed1-4118-4f00-a6f0-4f7e9a070103"))
 
 if ("exp" in args and chosen_training in VIPtrainings) or (chosen_training.lower() in p_tools and is_tool in VIPtrainings):
     actions = 28 - (intelligenceMod * 2) if intelligenceMod > 0 else 28
     mydice += "+" + proficiencyBonus
-if "ls" in args and training_tool == True:
-    mydice += "+1[luckstone]"
+    cost = 10
 else:
     actions = 14 - intelligenceMod if intelligenceMod > 0 else 14
+    cost = 5
 
+if "ls" in args and training_tool == True:
+    mydice += "+1[luckstone]"
 if "guid" in args:
     mydice += "+1d4[guidance]"
+
+bags = load_json(get("bags"))
+i = 0
+for bag in bags:
+    if bag[0] == "Coin Pouch":
+        break
+    i = i + 1
+
+if i == len(bags):
+    err("you have no coin pouch")
+
+gold = bags[i][1].gp
+
+if gold < cost:
+    err("You only have " + gold + "GP, you need to have " + cost + "GP <3")
+
+bags[i][1]['gp'] = bags[i][1]['gp'] - cost
+
+total_gold = bags[i][1].gp
+character().set_cvar("bags", dump_json(bags))
 
 cc = "Progress"
 character().create_cc_nx(cc, 0, actions)
@@ -67,10 +91,12 @@ else:
 
 checktitle = f' does the training downtime for {chosen_training}'
 response = f'Your current progress on {chosen_training} is {character().get_cc(cc)}/{actions}! | You gain {xp} * {level} = {xp * level} XP!'
+coin_response = f"Training cost {cost} GP, you now have {total_gold} GP remaining in your Coin Pouch."
 </drac2>
 -title "{{name}} {{checktitle}}"
 -desc "{{myroll}}"
 -footer "{{response}}
-Made by Omen"
+{{coin_response}}
+Made by Omie <3"
 -color <color>
 -thumb <image>

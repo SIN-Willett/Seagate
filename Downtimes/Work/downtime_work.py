@@ -50,8 +50,38 @@ elif myroll.result.total < 10:
 else:
     xp = 30
     gp = 1
-total_gp = (gp * int(work.income))
-response = f"You recieve {xp} * {level} = {xp * level} XP and {work.income} * {gp} = {total_gp} GP"
+total_earned = (gp * int(work.income))
+
+gp_gained = floor(total_earned)
+sp_gained = int((total_earned - gp_gained) * 10)
+
+bags = load_json(get("bags"))
+i = 0
+for bag in bags:
+    if bag[0] == "Coin Pouch":
+        break
+    i = i + 1
+
+if i == len(bags):
+    err("you have no coin pouch")
+
+bags[i][1]['sp'] = int(bags[i][1]['sp'] + sp_gained)
+bags[i][1]['gp'] = bags[i][1]['gp'] + gp_gained
+
+total_gp = bags[i][1].gp
+total_sp = bags[i][1].sp
+character().set_cvar("bags", dump_json(bags))
+
+response = f"You recieve {xp} * {level} = {xp * level} XP and {work.income} * {gp} = "
+coin_response = f"You now have "
+
+if sp_gained != 0:
+    response += f"{gp_gained} GP and {sp_gained} SP!"
+    coin_response += f"{total_gp} GP and {total_sp} SP!"
+else:
+    response += f"{gp_gained} GP!"
+    coin_response += f"{total_gp} GP!"
+
 </drac2>
 
 -title "{{name}} is doing the Working Downtime!"
@@ -59,6 +89,7 @@ response = f"You recieve {xp} * {level} = {xp * level} XP and {work.income} * {g
 
 **{{work.check}}:** {{myroll}}"
 -footer "{{response}}
+{{coin_response}}
 Made by Omie <3"
 -color <color>
 -thumb <image>
