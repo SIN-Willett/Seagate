@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D71UZEM)
 # Seagate
 Aliases, Gvars and all that good stuff for Seagate
 
