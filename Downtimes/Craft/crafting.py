@@ -58,7 +58,7 @@ character().create_cc_nx(cc,0,actions,None,None,0)
 if get_cc(cc) == actions:
     character().set_cc(cc, 0)
     
-##gvar for tool to attribute matching
+##cvar for tool to attribute matching
 stats = load_json(get("stats"))
 mod = stats[tool].mod
 arcana = character().skills.arcana.bonus + (character().skills.arcana.prof * proficiencyBonus)
