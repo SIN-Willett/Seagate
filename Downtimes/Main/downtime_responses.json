@@ -1,14 +1,13 @@
 {
-  "legal": [
-    "You earn no gold and no experience.",
-    "You earn half the amount of gold and experience associated with your chosen DC.",
-    "You earn the full amount of gold and experience associated with your chosen DC!"
-  ],
-  
-  "illegal": [
-    "You are now wanted for a DC {wantedDC} crime! Ping a moderator, and let an admin know to add you to the wanted board.",
-    "You are now wanted for your crimes! Ping a moderator, and let an admin know to add you to the wanted board.",
-    "You earn 15 xp and half the gold reward.",
-    "You earn 30 xp and the full gold reward!"
-  ]
+  "legal": {
+    "10": {"XP":20, "Gold":0.5},
+    "15": {"XP":40, "Gold":1},
+    "20": {"XP":60, "Gold":2}
+  },
+  "illegal": {
+    "10": {"XP":30, "Gold":3},
+    "15": {"XP":30, "Gold":5},
+    "20": {"XP":30, "Gold":7},
+    "25": {"XP":30, "Gold":10}
+  }
 }

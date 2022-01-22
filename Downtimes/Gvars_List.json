@@ -9,7 +9,6 @@
         "Saving"                    :       "83faff8e-8cdb-4758-9c36-a7882279dfea"
     },
     "responses": {
-        "Main"                      :       "2764f057-457a-483d-bb70-591863c8f695",
         "Service"                   :       "f5554176-d94a-4ba5-a735-425330f8f98c",
         "Housing"                   :       "018da0e0-0db5-46e1-9567-f895374f5fdb"
     },
@@ -21,8 +20,9 @@
         "Guilds"                    :       "d97c7ed1-cde8-418f-898d-12387408cc6d"
     },
     "dicts": {   
-        "Study-ables"               :       "42ca55a5-199c-42e9-b89b-2f903a626b02",
-        "Craftables"                :    	"c28ac8be-d70e-4842-8f5c-b9e251ce4eb6"
+        "Main"                      :       "cd374b66-bf6e-4ef9-ac64-d9e213a5c0cb",
+        "Study"                     :       "42ca55a5-199c-42e9-b89b-2f903a626b02",
+        "Craft"                     :    	"c28ac8be-d70e-4842-8f5c-b9e251ce4eb6"
     },
     "other_aliases": {
         "Stats"                     :       "2c0daf9b-fc9e-47ee-bd7b-9850ac961d6f",
