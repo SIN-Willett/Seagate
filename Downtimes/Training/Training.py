@@ -1,72 +1,72 @@
 # Gvar 585d1453-7303-44a5-b736-f707c2702b5e
 <drac2>
 args = &&&
-data = load_json(get_gvar("100f2682-77af-4982-bd1a-cc155b93f262"))
-VIPtrainings = load_json(get_gvar("81eb4ed1-4118-4f00-a6f0-4f7e9a070103"))
-cc = "Progress"
-par = argparse(args[1:])
 arg = args[1] if args else None
 
-chosen = None
-chosen_category = None
-for category, trainings in data.items():
-    for training in trainings:
-        if arg.lower() in training.lower():
-            chosen = training
-            chosen_category = category
+stats = load_json(get("stats"))
+training_tool = None
+chosen_training = None
+for trainings, entries in stats.items():
+    for training in entries:
+        if arg.lower() in trainings.lower():
+            chosen_training = trainings
+            training_tool = entries.is_tool
             break
-    if chosen:
+    if training_tool:
         break
 
-if not chosen:
-    err("could not find training modifier")
+if not chosen_training:
+    err("Could not find training modifier, are you sure you can train in " + arg + "?")
+if training_tool == False:
+    err("" + chosen_training + " is a skill, you can't train in skills friend.")
 
 mydice = ""
-
-stats = load_json(get("stats"))
 p_tools = get('pTools','').lower()
 
 if "adv" in args:
-    mydice += f"2d20kh1+{stats[chosen].mod}"
+    mydice += f"2d20kh1+{stats[chosen_training].mod}"
 elif "dis" in args:
-    mydice += f"2d20kl1+{stats[chosen].mod}"
+    mydice += f"2d20kl1+{stats[chosen_training].mod}"
 else:
-    mydice += f"1d20+{stats[chosen].mod}"
+    mydice += f"1d20+{stats[chosen_training].mod}"
 
 actions = 0
+VIPtrainings = load_json(get_gvar("81eb4ed1-4118-4f00-a6f0-4f7e9a070103"))
 
-if ("exp" in args and chosen in VIPtrainings) or (chosen.lower() in p_tools and chosen in VIPtrainings):
+if ("exp" in args and chosen_training in VIPtrainings) or (chosen_training.lower() in p_tools and is_tool in VIPtrainings):
     actions = 28 - (intelligenceMod * 2) if intelligenceMod > 0 else 28
     mydice += "+" + proficiencyBonus
+if "ls" in args and training_tool == True:
+    mydice += "+1[luckstone]"
 else:
     actions = 14 - intelligenceMod if intelligenceMod > 0 else 14
 
 if "guid" in args:
     mydice += "+1d4[guidance]"
-if "ls" in args and chosen_category != "athletics":
-    mydice += "+1[luckstone]"
 
-create_cc_nx(cc,0,actions)
-if get("DTtraining") != chosen:
-    set_cc(cc,0)
-    set_cvar("DTtraining", chosen)
-if get_cc(cc) == actions:
-    set_cc(cc,0)
+cc = "Progress"
+character().create_cc_nx(cc, 0, actions)
+
+if get("DTtraining") != chosen_training:
+    character().set_cc(cc, 0, actions)
+    set_cvar("DTtraining", chosen_training)
+if character().get_cc(cc) == actions:
+    character().set_cc(cc, 0, actions)
 
 myroll = vroll(mydice)
 xp = 0
 if myroll.total < 16:
-    character().mod_cc(cc, +1)
+    character().mod_cc(cc, +1, actions)
     xp = 10
 elif myroll.total < 21:
-    character().mod_cc(cc, +2)
+    character().mod_cc(cc, +2, actions)
     xp = 15
 else:
-    character().mod_cc(cc, +3)
+    character().mod_cc(cc, +3, actions)
     xp = 30
 
-checktitle = f' does the training downtime for {chosen}'
-response = f'Your current progress on {chosen} is {get_cc(cc)}/{actions}! | You gain {xp} * {level} = {xp * level} XP!'
+checktitle = f' does the training downtime for {chosen_training}'
+response = f'Your current progress on {chosen_training} is {character().get_cc(cc)}/{actions}! | You gain {xp} * {level} = {xp * level} XP!'
 </drac2>
 -title "{{name}} {{checktitle}}"
 -desc "{{myroll}}"
