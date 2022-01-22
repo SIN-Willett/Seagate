@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D71UZEM)
 ## !downtime work
 `!downtime work` is an alias that currently works in conjunction with `!work` and it looks like:  
 `!downtime work [arguments]`  

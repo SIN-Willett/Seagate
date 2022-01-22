@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D71UZEM)
 ## !downtime training
 `!training`  is an alias that currently works for all canonical proficiencies and use of it looks like: `!training <proficiency> [arguments]`
 

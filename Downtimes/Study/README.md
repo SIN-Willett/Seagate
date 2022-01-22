@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D71UZEM)
 ## !downtime study
 `!study` is used for the Arcane Study Downtime and use of it looks like: `!study <spell|tome|manual*> <hours>`
 

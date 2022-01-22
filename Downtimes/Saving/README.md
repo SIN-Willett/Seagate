@@ -1,3 +1,4 @@
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D71UZEM)
 ## !downtime save  
 `!downtime save` is an alias that looks like:  
 `!downtime save <number> <downtime> [args]`  
