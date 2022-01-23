@@ -50,12 +50,18 @@ else:
     tool    = crafting_details.tool
     actions = ceil(price / 10)
 
-cc = "Crafting: " + item_name
-##makes counter if it doesn't already exist
+# makes the minimum 1 action
 if actions < 1:
     actions = 1
-character().create_cc_nx(cc,0,actions,None,None,0)
-if get_cc(cc) == actions:
+# makes the actions 3 for house related things
+if not price:
+    actions = 3
+
+cc = "Crafting: " + item_name
+
+##makes counter if it doesn't already exist
+character().create_cc_nx(cc, 0, actions, None, None, 0)
+if (get_cc(cc) == actions) or (price == 0):
     character().set_cc(cc, 0)
     
 ##cvar for tool to attribute matching
@@ -149,20 +155,41 @@ else:
     else:
         character().mod_cc(cc, +3)
         xp = 30
+
+total_xp = xp * level
+
+current_actions = character().get_cc(cc)
+xp_args = "" + total_xp + " |  " + cc + " (" + current_actions + "/" + actions + ")"
+exp_cc = "Experience"
+xplog = load_json(get('xplog','{}'))
+timestamp = get("Timestamp")
+xplog.update({timestamp:xp_args})
+set_cvar('xplog',dump_json(xplog))
+mod_cc(exp_cc,total_xp)
+
+char_xp = get_cc(exp_cc)
+
+xplog_response = f"You now have {char_xp} XP and your most recent xplog entry will be:"
+
 title = f'{name} does the crafting downtime for {item_name}'
 response_xp = ()
 if xp == 0:
     response_xp = f"You failed crafting and gain no xp"
 else:
-    response_xp = f"Gain {xp} * {level} = {xp * level} XP!"
+    response_xp = f"Gain {xp} * {level} = {total_xp} XP!"
 </drac2>
 -title "{{title}}"
 -desc "**{{tool}}:** {{myroll}}
 
-Your progress on crafting this is now __{{character().get_cc(cc)}}/{{actions}}__!
+Your progress on crafting this is now __{{current_actions}}/{{actions}}__!
 {{magic_response}}"
 -footer "{{response_xp}}
+
 This item costs {{round(cost, 2)}} GP to make and sells to players for {{price}} GP and to the void for {{sell}} GP!
+
+{{xplog_response}}
+{{timestamp}}: {{xp_args}}
+
 Made by Omie <3"
 -color <color>
 -thumb <image>

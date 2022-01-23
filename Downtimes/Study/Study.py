@@ -25,11 +25,22 @@ if get_cc(study) == max_hours:
 
 character().mod_cc(study, +study_hours)
 
+xp_args = "0 | Studying " + study + " for " + study_hours + " hours"
+xplog = load_json(get('xplog','{}'))
+timestamp = get("Timestamp")
+xplog.update({timestamp:xp_args})
+set_cvar('xplog',dump_json(xplog))
+
 title = f' does the study downtime for {study}'
 response = f"After studying for **{study_hours}** hours your current progress on studying __{study}__ is now **{character().get_cc(study)}/{max_hours}**!"
+xplog_response = f"Your most recent xplog entry will be:"
 </drac2>
 -title "{{name}} {{title}}"
 -desc "{{response}}"
--footer "Made by Omie <3"
+-footer "
+{{xplog_response}}
+{{timestamp}}: {{xp_args}}
+
+Made by Omie <3"
 -color <color>
 -thumb <image>

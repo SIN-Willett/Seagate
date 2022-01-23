@@ -1,7 +1,28 @@
-#1d644726-7dde-4e11-9ebf-aa15d1c155ff
 tembed
 {{get_gvar("2c0daf9b-fc9e-47ee-bd7b-9850ac961d6f")}}
+{{create_cc_nx("Experience")}}
+{{calendar=load_json(get_gvar("1aec09a0-9e25-4700-9c2d-42d79cb0163b"))}}
+{{hourOffset=calendar.get('hourOffset',0)+int(get('timezone',0))}}
+{{baseYear=calendar.get("yearOffset",1970)}}
+{{Time=time()+(3600*hourOffset)}}
+{{totalDayCount=int((Time)//86400)}}
+{{yearsPassed=totalDayCount//calendar.length}}
+{{numLeapYears=len([x for x in range(baseYear,baseYear+yearsPassed-4) if x//calendar.get('leapCycle',4)==x/calendar.get('leapCycle',4)]) if calendar.get('leapCycle') else 0}}
+{{yearStartDay=yearsPassed*calendar.length+numLeapYears}}
+{{totalDays=totalDayCount-yearStartDay}}
+{{year=int((totalDayCount-numLeapYears-1)//calendar.length)+baseYear}}
+{{isLeapYear=year//calendar.get('leapCycle',4)==year/calendar.get('leapCycle',4) if numLeapYears else 0}}
+{{calendarDay=totalDays%(calendar.length+isLeapYear) or calendar.length+isLeapYear}}
+{{hour=int(Time%86400//3600)}}
+{{minute=int(Time%86400%3600//60)}}
+{{second=int(Time%86400%3600%60)}}
+{{monthLengths=[x.length+(isLeapYear and x.name==calendar.get('leapMonth','February')) for x in calendar.months]}}
+{{day,month=calendarDay,1}}
+{{[(day:=day-monthLengths[x],month:=month+1) for x in range(len(monthLengths)) if month>x and day>monthLengths[x]]}}
+{{timestamp=f'{day:02}.{month:02}.{str(year)[2:]} ({hour:02}:{minute:02}:{second:02})'}}
+{{character().set_cvar("Timestamp",timestamp)}} 
 <drac2>
+## The above timestamp generation is sourced from Derixyleth#0636 xplog alias
 args = &ARGS&
 
 ## This is to sub in a saved DT

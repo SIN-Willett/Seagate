@@ -72,12 +72,25 @@ total_gp = bags[i][1].gp
 total_sp = bags[i][1].sp
 character().set_cvar("bags", dump_json(bags))
 
-response = f"You recieve {xp} * {level} = {xp * level} XP and {work.income} * {gp} = "
-coin_response = f"You now have "
+total_xp = (xp * level)
+xp_args = str(total_xp + " | Work downtime at " + work.location)
+
+exp_cc = "Experience"
+xplog = load_json(get('xplog','{}'))
+timestamp = get("Timestamp")
+xplog.update({timestamp:xp_args})
+set_cvar('xplog',dump_json(xplog))
+mod_cc(exp_cc,total_xp)
+
+char_xp = get_cc(exp_cc)
+
+response = f"You recieve {xp} * {level} = {total_xp} XP and {work.income} * {gp} = "
+coin_response = f"You now have {char_xp} XP and "
+xplog_response = f"Your most recent xplog entry will be:"
 
 if sp_gained != 0:
-    response += f"{gp_gained} GP and {sp_gained} SP!"
-    coin_response += f"{total_gp} GP and {total_sp} SP!"
+    response += f"{gp_gained} GP + {sp_gained} SP!"
+    coin_response += f"{total_gp} GP + {total_sp} SP!"
 else:
     response += f"{gp_gained} GP!"
     coin_response += f"{total_gp} GP!"
@@ -89,7 +102,12 @@ else:
 
 **{{work.check}}:** {{myroll}}"
 -footer "{{response}}
+
 {{coin_response}}
+
+{{xplog_response}}
+{{timestamp}}: {{xp_args}}
+
 Made by Omie <3"
 -color <color>
 -thumb <image>

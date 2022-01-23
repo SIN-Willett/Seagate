@@ -70,14 +70,21 @@ successes = sum(roll.total >= dc for roll in rolls)
 if sum(roll.result.crit == 1 for roll in rolls) > 0:
     successes = num_checks
 
-# respond
+# response
+output_text = '\n'
+for i in range(num_checks):
+    success = 'Success!' if rolls[i].total >= dc else 'Failure!'
+    output_text += '**' + checks[i] + ':** ' + rolls[i] + ' **' + success + '**\n'
+if "guid" in args:
+    output_text += "**Guidance: **" + vroll(f"1d4") + " add this to one of the above rolls!\n"
+
 crime = (num_checks == 3)
 strdc = str(dc)
 data = load_json(get_gvar("cd374b66-bf6e-4ef9-ac64-d9e213a5c0cb"))["illegal" if crime else "legal"]
 
 xp = data[strdc]["XP"]
 gp = data[strdc]["Gold"]
-
+total_xp = 0
 total_earned = gp
 response = ""
 coin_response = f"You now have "
@@ -91,9 +98,11 @@ if crime:
     if successes == 2:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
-        response = f"You earn {xp} * {level} = {xp * level} XP and "
+        total_xp = xp * level
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
     else:
-        response = f"You earn {xp} * {level} = {xp * level} XP and "
+        total_xp = xp * level
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
 else:
     if not successes:
         response = f"You earn no GP and no experience."
@@ -102,9 +111,11 @@ else:
     if successes == 1:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
-        response = f"You earn {xp} * {level} = {xp * level} XP and "
+        total_xp = xp * level
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
     else:
-        response = f"You earn {xp} * {level} = {xp * level} XP and "
+        total_xp = xp * level
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
 
 gp_gained = floor(total_earned)
 sp_gained = floor((total_earned - gp_gained) * 10)
@@ -139,18 +150,29 @@ else:
     response += f"{gp_gained} GP!"
     coin_response += f"{total_gp} GP!"
 
-output_text = '\n'
-for i in range(num_checks):
-    success = 'Success!' if rolls[i].total >= dc else 'Failure!'
-    output_text += '**' + checks[i] + ':** ' + rolls[i] + ' **' + success + '**\n'
-if "guid" in args:
-    output_text += "**Guidance: **" + vroll(f"1d4") + " add this to one of the above rolls!\n"
+xp_args = "" + total_xp + " | DC " + dc + " " + downtime_name + " downtime"
+exp_cc = "Experience"
+xplog = load_json(get('xplog','{}'))
+timestamp = get("Timestamp")
+xplog.update({timestamp:xp_args})
+set_cvar('xplog',dump_json(xplog))
+mod_cc(exp_cc,total_xp)
+
+char_xp = get_cc(exp_cc)
+
+xplog_response = f"You now have {char_xp} XP and your most recent xplog entry will be:"
+
 </drac2>
 
 -title "{{name}} does the {{downtime_name}} downtime!"
 -desc "**DC:** {dc} {{output_text}}"
 -footer "{{response}}
+
 {{coin_response}}
+
+{{xplog_response}}
+{{timestamp}}: {{xp_args}}
+
 Made by Omen & Sin"
 -color <color>
 -thumb <image>
