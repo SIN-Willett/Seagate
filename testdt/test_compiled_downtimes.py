@@ -24,6 +24,7 @@ tembed
 <drac2>
 ## The above timestamp generation is sourced from Derixyleth#0636 xplog alias
 args = &ARGS&
+
 ## This is to sub in a saved DT
 if args[0].isnumeric():
     index = args[0]
@@ -42,28 +43,25 @@ if args[0].isnumeric():
 strargs = str(args)
 DT = args[0]
 
-if DT == "test":
-    err("This is the live downtime alias, are you trying to use !testdt ?")
-
 ## This is to save a DT
-if DT == "save":
+if args[0] == "save":
     return get_gvar("83faff8e-8cdb-4758-9c36-a7882279dfea").replace("&&&", strargs)
 
 ## This is to run DTs
 if DT == "service":
-    return get_gvar("e55f5a53-b70a-484d-a386-6acc350d2c0d").replace("&&&", strargs)
+    return get_gvar("4720b72e-77c9-4f7c-91df-fcb86efe897c").replace("&&&", strargs)
 
 if DT in ["work", "working", "job"]:
-    return get_gvar("1231c3de-651d-4d19-abfe-185c09b785c7").replace("&&&", strargs)
+    return get_gvar("a74d17ca-00a8-4e43-9ceb-3eb35c5c0c9b").replace("&&&", strargs)
 
 if DT in ["craft", "crafting"]:
-    return get_gvar("4bd5ceb6-e82f-4196-be25-988c6c4e2a3d").replace("&&&", strargs)
+    return get_gvar("9f616ca4-939b-44d4-be89-e80f77e89c24").replace("&&&", strargs)
 
 if DT in ["train", "training"]:
-    return get_gvar("585d1453-7303-44a5-b736-f707c2702b5e").replace("&&&", strargs)
+    return get_gvar("b378739b-efff-4e99-ae3f-ea00ff58e1d0").replace("&&&", strargs)
 
 if DT in ["study", "studying"]:
-    return get_gvar("97d2dddb-2116-41e3-a312-44351619d3eb").replace("&&&", strargs)
+    return get_gvar("608a7559-b0f5-4dbf-95d7-b4ce9ffd7cae").replace("&&&", strargs)
 
-return get_gvar("da0f7936-97bd-472c-b3fd-f72622df20e4").replace("&&&", strargs)
+return get_gvar("a1adcea5-b563-4e8e-a546-9866919cc415").replace("&&&", strargs)
 </drac2>
