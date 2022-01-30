@@ -67,17 +67,35 @@ for i in range(num_checks):
     else:
         rolls.append(vroll(f"1d20+{mods[i]}"))
 
-successes = sum(roll.total >= dc for roll in rolls)
+roll_values = [roll.total for roll in rolls]
+
+guid_index = -1
+guid_text = ""
+guid_value = 0
+if "guid" in args:
+    losses = [roll.total for roll in rolls if roll.total < dc]
+    if not losses:
+        best = max(roll_values)
+    else:
+        best = max(losses)
+
+    index = roll_values.index(best)
+    guid_roll = vroll("+1d4[guidance]")
+    guid_index = index
+    guid_text += guid_roll
+    guid_value = guid_roll.total
+
+successes = sum(rolls[i].total + (guid_value if i == guid_index else 0) >= dc for i in range(num_checks))
 if sum(roll.result.crit == 1 for roll in rolls) > 0:
-    successes = num_checks
+    successes = num_checks 
 
 # response
 output_text = '\n'
 for i in range(num_checks):
-    success = 'Success!' if rolls[i].total >= dc else 'Failure!'
-    output_text += '**' + checks[i] + ':** ' + rolls[i] + ' **' + success + '**\n'
-if "guid" in args:
-    output_text += "**Guidance: **" + vroll(f"1d4") + " add this to one of the above rolls!\n"
+    success = 'Success!' if rolls[i].total + (guid_value if i == guid_index else 0) >= dc else 'Failure!'
+    tab = "‎ " * ((len(checks[i]) * 2) + 2)
+    guid_success = "\n" + tab + guid_text + " = `" + (rolls[i].total + guid_value) + "`"
+    output_text += '**' + checks[i] + ':** ' + rolls[i]  + (guid_success if i == guid_index else "") + ' **' + success + '**\n'
 
 crime = (num_checks == 3)
 strdc = str(dc)

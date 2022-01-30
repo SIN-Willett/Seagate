@@ -59,9 +59,6 @@ if not price:
     actions = 3
 
 cc = "Crafting: " + item_name
-
-##makes counter if it doesn't already exist
-character().create_cc_nx(cc, 0, actions, None, None, 0)
     
 ##cvar for tool to attribute matching
 stats = load_json(get("stats"))
@@ -103,7 +100,7 @@ myroll = vroll(mydice)
 cost = (price * 0.5)
 sell = round((price * 0.75), 2)
 magic_item_adept = False
-if rarity == "Common" or "Uncommon":
+if (rarity == "Common") or (rarity == "Uncommon"):
     magic_item_adept = True
 registered = get("Guild")
 if "guild" in args or registered:
@@ -119,7 +116,7 @@ if crafting_type == "Mundane":
         xp = 15
     else:
         xp = 15
-elif artificer_level >= 10 and magic_item_adept == True:
+elif (artificer_level >= 10) and (magic_item_adept == True):
     if myroll.total < 15:
         xp = 0
         cost = (cost * 0.5)

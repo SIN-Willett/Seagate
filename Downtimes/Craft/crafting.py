@@ -1,5 +1,5 @@
-# Gvar 4bd5ceb6-e82f-4196-be25-988c6c4e2a3d
 <drac2>
+# gvar 4bd5ceb6-e82f-4196-be25-988c6c4e2a3d
 args = &&&
 ##gvar for items 1st dict "Magic", 2nd dict "Mundane"
 craftables = load_json(get_gvar("c28ac8be-d70e-4842-8f5c-b9e251ce4eb6"))
@@ -71,10 +71,10 @@ arcana = character().skills.arcana.bonus + (character().skills.arcana.prof * pro
 magic_response = None
         
 artificer_level = 0
-for (cls, level) in character().levels:
+for (cls, class_level) in character().levels:
     if cls == "Artificer":
-        if level > 1:
-            artificer_level = level
+        if class_level > 1:
+            artificer_level = class_level
             ss = ss_art
     break
 
@@ -108,7 +108,7 @@ myroll = vroll(mydice)
 cost = (price * 0.5)
 sell = round((price * 0.75), 2)
 magic_item_adept = False
-if rarity == "Common" or "Uncommon":
+if (rarity == "Common") or (rarity == "Uncommon"):
     magic_item_adept = True
 registered = get("Guild")
 if "guild" in args or registered:
@@ -127,7 +127,7 @@ if crafting_type == "Mundane":
     else:
         character().mod_cc(cc, +3)
         xp = 15
-elif artificer_level >= 10 and magic_item_adept == True:
+elif (artificer_level >= 10) and (magic_item_adept == True):
     if myroll.total < 15:
         xp = 0
         cost = (cost * 0.5)
