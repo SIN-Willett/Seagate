@@ -3,6 +3,7 @@
 # THIS IS A TEST
 args = &&&
 arg = args[1] if args else None
+pars = argparse(args).last
 
 stats = load_json(get("stats"))
 training_tool = None
@@ -48,6 +49,9 @@ if "ls" in args and training_tool == True:
     mydice += "+1[luckstone]"
 if "guid" in args:
     mydice += "+1d4[guidance]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
 
 bags = load_json(get("bags"))
 i = 0
@@ -82,7 +86,7 @@ total_xp = (xp * level)
 
 exp_cc = "Experience"
 
-char_xp = get_cc(Experience)
+char_xp = get_cc(exp_cc)
 
 checktitle = f' tests the training downtime for {chosen_training}'
 response = f'If this was not a test your current progress on {chosen_training} would be {successes}/{actions}! | You would gain {xp} * {level} = {total_xp} XP!'

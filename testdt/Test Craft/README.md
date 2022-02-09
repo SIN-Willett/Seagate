@@ -14,10 +14,11 @@
 
 ### Optional Arguments:
 
-- **`adv`**   *gives **advantage***
-- **`dis`**   *gives **disadvantage***
+- **`adv`**     *gives **advantage***
+- **`dis`**     *gives **disadvantage***
 - **`guid`**    *adds **guidance***
-- **`ls`**    *adds the **+1** from the **Luckstone** item to the tool check*
+- **`ls`**      *adds the **+1** from the **Luckstone** item to the tool check*
+- **`-b #`**    *adds whatever number you replace the # with to checks*
 - **`guild`**   *applies the **25% discount** to crafting costs if you have not done `!guild`*
 - **`prof`**    *overwrites `!tool`'s **proficiency** to the tool check*
-- **`exp`**   *overwrites `!tool`'s **expertise** to the tool check*
+- **`exp`**     *overwrites `!tool`'s **expertise** to the tool check*

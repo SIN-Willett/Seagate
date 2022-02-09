@@ -2,6 +2,7 @@
 # gvar 4720b72e-77c9-4f7c-91df-fcb86efe897c
 # THIS IS A TEST
 args = &&&
+pars = argparse(args).last
 
 if not args:
     err("Please clarify who you're giving Service to!")
@@ -19,6 +20,9 @@ else:
     mydice += f"1d20+{character().skills.religion.value}"
 if "guid" in args:
     mydice += "+1d4[guidance]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
 
 myroll = vroll(mydice)
 

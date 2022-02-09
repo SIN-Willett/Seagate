@@ -9,14 +9,15 @@
 *Sets the DC for the checks*
 
 ### Optional Arguments:
-- **`adv`**     *gives **advantage** to __all__ rolls in the downtime*
+- **`adv`**                      *gives **advantage** to __all__ rolls in the downtime*
    - *You can use `adv1`, `adv2`, `adv3` to specify only certain rolls have `adv`*
-- **`dis`**     *gives **disadvantage** to __all__ rolls in the downtime*
+- **`dis`**                      *gives **disadvantage** to __all__ rolls in the downtime*
    - *You can use `dis1`, `dis2`, `dis3` to specify only certain rolls have `dis`*
-- **`guid`**   *adds a **guidance** roll to be added to one downtime roll* 
-- **`ls`**        *adds the **+1** from the **Luckstone** item to the tool check*  
-- **`prof`**  *overwrites `!tool`'s **proficiency** to any tool check in the downtime*  
-- **`exp`**     *overwrites `!tool`'s **expertise** to any tool check in the downtime*
+- **`guid`**                     *adds a **guidance** roll to be added to one downtime roll* 
+- **`ls`**                       *adds the **+1** from the **Luckstone** item to the tool check*
+- **`-b1 #`, `-b2 #`, `-b3 #`**  *adds whatever number you replace the # with to the specified checks*
+- **`prof`**                     *overwrites `!tool`'s **proficiency** to any tool check in the downtime*  
+- **`exp`**                      *overwrites `!tool`'s **expertise** to any tool check in the downtime*
 
 ## !guild
 `!guild` is used to register your guild which is currently used to calculate material cost discount automatically for `!downtime craft` and use of it looks like:  

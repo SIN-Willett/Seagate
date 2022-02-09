@@ -1,6 +1,8 @@
 <drac2>
+# gvar 585d1453-7303-44a5-b736-f707c2702b5e
 args = &&&
 arg = args[1] if args else None
+pars = argparse(args).last
 
 stats = load_json(get("stats"))
 training_tool = None
@@ -46,6 +48,9 @@ if "ls" in args and training_tool == True:
     mydice += "+1[luckstone]"
 if "guid" in args:
     mydice += "+1d4[guidance]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
 
 bags = load_json(get("bags"))
 i = 0

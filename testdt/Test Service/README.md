@@ -6,4 +6,11 @@
 `!downtime service Ioun adv guid`  
 `!downtime service "Deep Sashelas" adv`  
 
+### Optional Arguments:
+
+- **`adv`**     *gives **advantage***
+- **`dis`**     *gives **disadvantage***
+- **`guid`**    *adds **guidance***
+- **`-b #`**    *adds whatever number you replace the # with to checks*
+
 - Note: *You must specify who the Service Downtime is to as <god>*

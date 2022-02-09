@@ -2,6 +2,7 @@
 # gvar a74d17ca-00a8-4e43-9ceb-3eb35c5c0c9b
 # THIS IS A TEST
 args = &&&
+pars = argparse(args).last
 
 registered = get("Work")
 if not registered:
@@ -37,6 +38,9 @@ if "guid" in args:
     mydice += "+1d4[guidance]"
 if "ls" in args and is_tool:
     mydice += "+1[luckstone]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
     
 myroll = vroll(mydice)
 

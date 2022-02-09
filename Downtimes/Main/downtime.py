@@ -56,9 +56,15 @@ if (num_checks == 3 and dc not in [10, 15, 20, 25]) or (num_checks == 2 and dc n
 rolls = []
 successes = 0
 tool = 0
-    
+
+arg_space = args + ' '
+pars = argparse(arg_space).last
+
 # roll
 for i in range(num_checks):
+    if "-b" + (i + 1) in args or "-bonus" + (i + 1) in args:
+        bonus = pars("b" + (i + 1), pars("bonus" + (i + 1),""))
+        mods[i] = int(int(mods[i]) + int(bonus))
     if "adv" in args or "adv" + (i + 1) in args:
         rolls.append(vroll(f"2d20kh1+{mods[i]}"))
     elif "dis" in args or "dis" + (i + 1) in args:

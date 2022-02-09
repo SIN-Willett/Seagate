@@ -1,6 +1,7 @@
 <drac2>
 # gvar 4bd5ceb6-e82f-4196-be25-988c6c4e2a3d
 args = &&&
+pars = argparse(args).last
 ##gvar for items 1st dict "Magic", 2nd dict "Mundane"
 craftables = load_json(get_gvar("c28ac8be-d70e-4842-8f5c-b9e251ce4eb6"))
 inputcraft = args[1]
@@ -13,7 +14,11 @@ for craftableCategory, stuff in craftables.items():
         break
         
     for craftableName, craftableDetails in stuff.items():
-        if (inputcraft.lower() in craftableName.lower()):
+        if (inputcraft.lower() == craftableName.lower()):
+            item_name = craftableName
+            crafting_details = craftableDetails
+            crafting_type = craftableCategory
+        elif (inputcraft.lower() in craftableName.lower()):
             item_name = craftableName
             crafting_details = craftableDetails
             crafting_type = craftableCategory
@@ -102,6 +107,9 @@ if "guid" in args:
     mydice += "+1d4[guidance]"
 if "ls" in args and crafting_type == "Mundane":
     mydice += "+1[luckstone]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
 
 myroll = vroll(mydice)
 

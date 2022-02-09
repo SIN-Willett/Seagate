@@ -12,5 +12,6 @@ shield, sylvan, alchemist's supplies, thieves' tools, viol, etc.
 - **`exp`**     *trains in **expertise** of the proficiency*
 - **`adv`**     *gives **advantage***
 - **`dis`**     *gives **disadvantage***
-- **`guid`**   *adds **guidance***
-- **`ls`**       *adds the +1 from the **Luckstone** item to expertise training checks*
+- **`guid`**    *adds **guidance***
+- **`ls`**      *adds the +1 from the **Luckstone** item to expertise training checks*
+- **`-b #`**    *adds whatever number you replace the # with to training checks*

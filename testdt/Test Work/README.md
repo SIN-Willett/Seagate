@@ -10,11 +10,12 @@
 
 ### Optional Arguments:
 
-- **`adv`** *gives **advantage***  
+- **`adv`**     *gives **advantage***  
 - **`dis`**     *gives **disadvantage***
-- **`guid`**   *adds **guidance***
-- **`ls`**        *adds the **+1** from the **Luckstone** item to the tool check*
-- **`prof`**  *overwrites `!tool`'s **proficiency** to the tool check*
+- **`guid`**    *adds **guidance***
+- **`ls`**      *adds the **+1** from the **Luckstone** item to the tool check*
+- **`-b #`**    *adds whatever number you replace the # with to checks*
+- **`prof`**    *overwrites `!tool`'s **proficiency** to the tool check*
 - **`exp`**     *overwrites `!tool`'s **expertise** to the tool check*
   
 ## !work

@@ -2,6 +2,7 @@
 # gvar 9f616ca4-939b-44d4-be89-e80f77e89c24
 # THIS IS A TEST
 args = &&&
+pars = argparse(args).last
 ##gvar for items 1st dict "Magic", 2nd dict "Mundane"
 craftables = load_json(get_gvar("c28ac8be-d70e-4842-8f5c-b9e251ce4eb6"))
 inputcraft = args[1]
@@ -94,6 +95,9 @@ if "guid" in args:
     mydice += "+1d4[guidance]"
 if "ls" in args and crafting_type == "Mundane":
     mydice += "+1[luckstone]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
 
 myroll = vroll(mydice)
 

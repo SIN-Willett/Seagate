@@ -1,6 +1,7 @@
 # Gvar e55f5a53-b70a-484d-a386-6acc350d2c0d
 <drac2>
 args = &&&
+pars = argparse(args).last
 
 if not args:
     err("Please clarify who you're giving Service to!")
@@ -18,6 +19,9 @@ else:
     mydice += f"1d20+{character().skills.religion.value}"
 if "guid" in args:
     mydice += "+1d4[guidance]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
 
 myroll = vroll(mydice)
 

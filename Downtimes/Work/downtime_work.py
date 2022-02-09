@@ -1,6 +1,7 @@
 # Gvar  1231c3de-651d-4d19-abfe-185c09b785c7
 <drac2>
 args = &&&
+pars = argparse(args).last
 
 registered = get("Work")
 if not registered:
@@ -36,6 +37,9 @@ if "guid" in args:
     mydice += "+1d4[guidance]"
 if "ls" in args and is_tool:
     mydice += "+1[luckstone]"
+if "-b" in args or "-bonus" in args:
+    bonus = pars("b", pars("bonus",""))
+    mydice += ("+" + bonus + "[bonus]")
     
 myroll = vroll(mydice)
 
