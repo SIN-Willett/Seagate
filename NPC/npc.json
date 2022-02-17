@@ -1,0 +1,227 @@
+{
+    "Celwyn Blaesocket": {
+        "npc_title"             :      "a Scribe Master",
+        "npc_class"             :      "Wizard",
+        "race"                  :      "Gnome",
+        "pronouns"              :      "she/her",
+        "location"              :      "<#759929524057276419>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/799569347508568064/94ec4d276be087e99c30ad954b0e04e2.png",
+        "quote"                 :      "'O-oh! Hi, I- umm I'm a little busy right now but let's talk later, okay?'"
+    },
+    "Szesa Skye": {
+        "npc_title"             :      "a Bounty Hunter",
+        "npc_class"             :      "Rogue/Fighter ",
+        "race"                  :      "Yuan-Ti Pureblood",
+        "pronouns"              :      "he/him/his",
+        "location"              :      "<#799587617783808040>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/799587617590345728/image0.png",
+        "quote"                 :      "'Ssso, you're the onesss taking care of thisss?'"
+    },
+    "Henri Rosej": {
+        "npc_title"             :      "a Bartender and Owner",
+        "npc_class"             :      "Commoner...?",
+        "race"                  :      "Half-Elf",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#767498251938955274>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/799676847239462912/image0.png",
+        "quote"                 :      "'And good morning to you! How delightful it is to see you!'"
+    },
+    "Eldar Qinrie": {
+        "npc_title"             :      "a Tired Hermit",
+        "npc_class"             :      "Half-Elf",
+        "race"                  :      "Wizard",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#759932912979148830>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/805858345528852520/bdd9b14fe876063bb454db7fbb4daa88.png",
+        "quote"                 :      "'If you won't mind, I will finally go to sleep now.'"
+    },
+    "Judas Beararms": {
+        "npc_title"             :      "Hunter the Himbo",
+        "npc_class"             :      "Barbarian",
+        "race"                  :      "Half-Orc",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#759932912979148830>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/806415663081717800/image0.png",
+        "quote"                 :      "'I'd come with y'all but I got to work. Ya know how it is, hahaha!'"
+    },
+    "Lyndis Valfir": {
+        "npc_title"             :      "a Passionate Scaredy-cat",
+        "npc_class"             :      "Sorcerer",
+        "race"                  :      "Sea Elf",
+        "pronouns"              :      "she/her",
+        "location"              :      "<#756731226198507661> or <#763792096560939049>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/808357262460059648/2306db737f52d9daaf1ed9f2eed0e6f0.png",
+        "quote"                 :      "'You can enter by the main door, just... be careful. I'll be waiting here.'"
+    },
+    "Happiness": {
+        "npc_title"             :      "a Gardener",
+        "npc_class"             :      "Druid",
+        "race"                  :      "Tiefling",
+        "pronouns"              :      "she/her",
+        "location"              :      "<#759932912979148830>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/808416828240953375/4wju47bnigl21.png",
+        "quote"                 :      "'Good luck! Oh, and remember. Please don't actually kill them... just... make them leave, okay? Or knock them out and carry them into the wild.'"
+    },
+    "Sanctity": {
+        "npc_title"             :      "a Forrager",
+        "npc_class"             :      "Ranger",
+        "race"                  :      "Tiefling",
+        "pronouns"              :      "she/her",
+        "location"              :      "<#763093185362657281>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/808917736905768970/3ef404f8e74ae2db4ad231fe680c17aa.png",
+        "quote"                 :      "'Howdy! So.. this is the group! Nice to meet ya and all that.'"
+    },
+    "Rosne": {
+        "npc_title"             :      "the Cook",
+        "npc_class"             :      "Bard",
+        "race"                  :      "Halfling",
+        "pronouns"              :      "she/her",
+        "location"              :      "<#763093185362657281>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/809069397217509466/daa88cd6afa06837edeb7446d1f4f391.png",
+        "quote"                 :      "'Thank you so so so so so much! Here are some rewards, they're cupcakes!'"
+    },
+    "Terrence G. Mugsby": {
+        "npc_title"             :      "the Weirdo from the Tent",
+        "npc_class"             :      "Artificer",
+        "race"                  :      "Rock Gnome",
+        "pronouns"              :      "he/them",
+        "location"              :      "<#763792096560939049>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/809146581257289728/HS3-010GnomishMasterEngineerfinal.jpg",
+        "quote"                 :      "'Ah, hello!! You the saps that're willin' to get tested on? Well, nice to meet you all! I'm Mugsby - Terrence G. Mugsby!'"
+    },
+    "Bente": {
+        "npc_title"             :      "the Responsible",
+        "npc_class"             :      "Cleric",
+        "race"                  :      "Human",
+        "pronouns"              :      "she/her",
+        "location"              :      "<#763093185362657281> or <#759933756672180224>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/818419465762766888/28f98770ac035c542db57772e45da63f.png",
+        "quote"                 :      "'Hello! I'm so glad someone actually noticed my request- I uh- This just has been troubling for the past few days and I.. I just wanted to come visit here in peace-'"
+    },
+    "Jericho": {
+        "npc_title"             :      "the Serial Prankster",
+        "npc_class"             :      "Rogue",
+        "race"                  :      "Tabaxi",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#763093185362657281>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/823900031044157500/IMG_4228.JPG",
+        "quote"                 :      "'Oh no, Jericho did not do that. Jericho would never!'"
+    },
+    "Tazynthacrimus": {
+        "npc_title"             :      "the (Former) Merchant",
+        "npc_class"             :      "Unknown",
+        "race"                  :      "Tabaxi",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#756729592181424219>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/835401454113390612/chris-dickson-kitty03.png",
+        "quote"                 :      "'Ah yes, I can see you've come attend to the matters our notice referenced.'"
+    },
+    "Krolor Earthshaper": {
+        "npc_title"             :      "Master of the Orphanage",
+        "npc_class"             :      "Cleric",
+        "race"                  :      "Dwarven",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#763093185362657281>",
+        "image"                 :      "https://static.wikia.nocookie.net/emerald-isles/images/5/5b/Dwarf_Cleric.jpg",
+        "quote"                 :      "No Quote Recorded"
+    },
+    "Scooper": {
+        "npc_title"             :      "the Merchant of the Depths",
+        "npc_class"             :      "Unknown",
+        "race"                  :      "Arcanaloth",
+        "pronouns"              :      "he/they",
+        "location"              :      "<#759220934157664296>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/897395999423737916/858486_full.png",
+        "quote"                 :      "'Oi, would't kill'ya 'ta approach like sensible fellas?'"
+    },
+    "Rye'lynn Evanara": {
+        "npc_title"             :      "the mithril handed",
+        "npc_class"             :      "Battlesmith Artificer",
+        "race"                  :      "Half-elf",
+        "pronouns"              :      "they/them",
+        "location"              :      "<#898350322664226816>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/652233874654363649/898662744344125510/Vermillion_and_Rye.png",
+        "quote"                 :      "'Good you're finally here. Knew I heard something. I'm short handed after a handful of my men have left. Undead are too dangerous for some folks. This is a list of tasks around the camp I'd like you to get done.'"
+    },
+    "Snurk Fishstick (and Slark)": {
+        "npc_title"             :      "the Fisherman",
+        "npc_class"             :      "Commoner?",
+        "race"                  :      "Grung",
+        "pronouns"              :      "they/them (and he/him)",
+        "location"              :      "<#756731226198507661>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/930602110045794374/unknown.png",
+        "quote"                 :      "No Quote Recorded"
+    },
+    "Owen Skye": {
+        "npc_title"             :      "the Stablemaster",
+        "npc_class"             :      "Ranger",
+        "race"                  :      "Fallen Aasimar",
+        "pronouns"              :      "he/they",
+        "location"              :      "<#799499954191204372>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/799499953965236264/baby_boy.png",
+        "quote"                 :      "No Quote Recorded"
+    },
+    "Obelath": {
+        "npc_title"             :      "the Oddity of the Sea ",
+        "npc_class"             :      "Wild Sorcerer",
+        "race"                  :      "Triton",
+        "pronouns"              :      "he/him",
+        "location"              :      "<#759937423924527124>",
+        "image"                 :      "https://cdn.discordapp.com/attachments/799443301403983902/799458898234179624/805284c0d2e9f953b034a7121ffe76a8.jpg",
+        "quote"                 :      "'Well, hullo there, my friend! You're in the oddities line, so I expect you're one of the folks who wants to trade oddity-for-oddity, aye?'"
+    },
+    "": {
+        "npc_title"             :      "",
+        "npc_class"             :      "",
+        "race"                  :      "",
+        "pronouns"              :      "",
+        "location"              :      "<#>",
+        "image"                 :      "",
+        "quote"                 :      "''"
+    },
+    "": {
+        "npc_title"             :      "",
+        "npc_class"             :      "",
+        "race"                  :      "",
+        "pronouns"              :      "",
+        "location"              :      "<#>",
+        "image"                 :      "",
+        "quote"                 :      "''"
+    },
+    "": {
+        "npc_title"             :      "",
+        "npc_class"             :      "",
+        "race"                  :      "",
+        "pronouns"              :      "",
+        "location"              :      "<#>",
+        "image"                 :      "",
+        "quote"                 :      "''"
+    },
+    "": {
+        "npc_title"             :      "",
+        "npc_class"             :      "",
+        "race"                  :      "",
+        "pronouns"              :      "",
+        "location"              :      "<#>",
+        "image"                 :      "",
+        "quote"                 :      "''"
+    },
+    "": {
+        "npc_title"             :      "",
+        "npc_class"             :      "",
+        "race"                  :      "",
+        "pronouns"              :      "",
+        "location"              :      "<#>",
+        "image"                 :      "",
+        "quote"                 :      "''"
+    },
+    "": {
+        "npc_title"             :      "",
+        "npc_class"             :      "",
+        "race"                  :      "",
+        "pronouns"              :      "",
+        "location"              :      "<#>",
+        "image"                 :      "",
+        "quote"                 :      "''"
+    }
+}
