@@ -1,0 +1,538 @@
+{   
+    "<#756729592181424219>": {
+        "location"                  :      "The Streets",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756729592181424219/757040943101771846/c5001.png",
+        "about"                     :      "Seagate's streets are sparse but well-kept. They are often dirt roads, but some well-trodden ones are paved with stone. The thatched roofs of the town's buildings allow for a clear view of the sky, unlike some more crowded cities. While walking down these streets, one might bump into a fisherman or the odd guard or two.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    }, 
+    "<#756729629880090704>": {
+        "location"                  :      "The Streets",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756729592181424219/757040943101771846/c5001.png",
+        "about"                     :      "Seagate's streets are sparse but well-kept. They are often dirt roads, but some well-trodden ones are paved with stone. The thatched roofs of the town's buildings allow for a clear view of the sky, unlike some more crowded cities. While walking down these streets, one might bump into a fisherman or the odd guard or two.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#756729671395049483>": {
+        "location"                  :      "The Streets",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756729592181424219/757040943101771846/c5001.png",
+        "about"                     :      "Seagate's streets are sparse but well-kept. They are often dirt roads, but some well-trodden ones are paved with stone. The thatched roofs of the town's buildings allow for a clear view of the sky, unlike some more crowded cities. While walking down these streets, one might bump into a fisherman or the odd guard or two.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#888456728868433950>": {
+        "location"                  :      "Authors of Iron",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/888456728868433950/888458625746608128/image0.jpg",
+        "about"                     :      "The shop is utterly spotless, the interior made of hard wood. Hung up on the walls are various weapons and a few tools, the highest quantity thereof is throwing weapons. There are crudely painted prices painted over the items. In addition, there are a couple of wooden manakins clad in armor that also have prices listed. A friendly-looking, somewhat tall drow woman approaches you. 'Welcome to Authors of Iron!' She speaks. 'What can I make for you today?' Right next to her on the desk are additionally applications for 'commissions-' for those who want something more specific.\n\n This is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@352965538584199170>\n\n The shop’s inventory can be found here: https://docs.google.com/spreadsheets/d/1Xk5UFd_UZhvExm3ejfrEqVWQzGyhjdsiy5HIf-_PQpk/edit?usp=sharing",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },    
+    "<#759919590234652672>": {
+        "location"                  :      "The Captain's Prow",
+        "location_type"             :      "Temple",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759919590234652672/760177452290277426/231.png",
+        "about"                     :      "An upside-down ship turned into a building is home to the main holy place of Valkur. Called the Captain's Prow for the image of Valkur painted on the prow, this temple is covered in symbols of the Captain of the Waves inside and out. Its interior is only lit by oil lamps and light from the portholes, and it smells of fresh saltwater. Pews are set up like those of a keelboat, and fishing nets are hung from the hull. There is a bunk cabin with room for up to ten priests of Valkur to reside.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },    
+    "<#765283059758006322>": {
+        "location"                  :      "The Cork and Cauldron",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/765283059758006322/765344829789306890/image0.png",
+        "about"                     :      "The shop itself takes the front-half of the ground floor of the two story building it resides in. The left and right walls of the room are lined with shelves of different products and tinctures. On the backside of the room is not only the counter but also shelves with more dangerous or more valuable products.\n\nBeside the counter is a door that leads towards the labor and workshop, which is in the rear half of the ground floor, and also 2 staircases: one leading to the second floor, which is where the shopkeep lives, and some storage rooms. The other leads down into the cellar, in which there are more storage rooms and part of the workshop.\n\nThe building itself is not that different from other building in the city, though it is painted darker than most. Its sign has a depiction of a vial and lists the shop’s name.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@342094264223924224>.\n\nInventory & Prices: https://docs.google.com/spreadsheets/d/1mKc5FIQvWa7Qta5IzBA6N4YU7MCH2a-V/edit?usp=drivesdk&ouid=114263058574029221243&rtpof=true&sd=true ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },    
+    "<#910645454331600966>": {
+        "location"                  :      "Lucian's Crystalized Emporium",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/760623926644310036/943562805179727932/unknown.png",
+        "about"                     :      "Situated close to the heart of Seagate, the Shop can be found in the ground floor of a grand manor. And like the building it resides in, the shop itselfs emits grandeur;\n\nThe walls of the Salesroom are lined with handmade Shelves on which artisan items of every kind are put on display- a show of the Owners abilities. Between the walls, closed showcases holding more expansive pieces are standing. \n\nA great part of the rearside of the shop is blocked off by the counter, behind it is, besides the door to the backroom of the shop, also the Tattoo-parlor always meticiously kept clean by either Lucian himself, or his artifical companion.\n\nOn the counter two signs are standing, both written on in a artistic-caligraphy. The left one says 'Commision of Magic items: Open', the sign on the right hand says: 'Commision of Artistic Objects of all kinds: 5 silver and upwards'\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@441257445596332032>\n\nThe shop’s inventory can be found here: https://docs.google.com/spreadsheets/d/1ICS-bBgw8MG8PhcihY1D0CFYwTUESQJl-f45K6l_zSE/edit?usp=sharing ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },    
+    "<#759943410743246888>": {
+        "location"                  :      "Driftwood Hall",
+        "location_type"             :      "Building",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759943410743246888/759944135897120808/tod-07-01.png",
+        "about"                     :      "One of the first buildings to be completed in Seagate, Driftwood Hall serves as the town hall, public forum, court, meeting place, and archives of the town of seafarers. It gets its name from the fact that it was originally built mostly out of driftwood, but it had to be rebuilt after a fire in 1507. Now, restored to its former glory, Driftwood Hall serves Seagate well as the heart of the settlement. ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },    
+    "<#760274340293115904>": {
+        "location"                  :      "Flocktoo Theater",
+        "location_type"             :      "Building",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/760274340293115904/764106543049998386/skt10-03.png",
+        "about"                     :      "The Flocktoo Theater is a large stone building, one of the most ornately built in Seagate. It is run by a strange pink aarakocra named Forlen Raa, who keeps an iron grip on all patrons and actors. Weekly and biweekly shows are every Wednesday and Saturday respectively. The building itself consists of a small lobby, where one can purchase tickets, and then the auditorium, stage, and backstage sections. Forlen himself lives in a small apartment within the theater.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },    
+    "<#775896317708730378>": {
+        "location"                  :      "Horseshoe General Goods",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/775896317708730378/775896626718834688/cos05-12.png",
+        "about"                     :      "The shop is small, square, and weird. The door to get inside is on the far right, as a giant glass window displaying counters of items hoarded the front side of the shop. \n\nInside, the smell of incense fills the air, as there is always some incense burning on the counter left to the door. The most notable thing is the strangely organized and labeled clutter of items that are spread throughout the shop.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@207961250171191296>.\n\nThe shop’s inventory can be found here: https://docs.google.com/spreadsheets/d/1mpfXLWnIlA3xzhCgUEveGDOp9L09omCSQ0IXE5Essqo/edit?usp=drivesdk",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#831663124150878208>": {
+        "location"                  :      "Invisible Hand Trading Co.",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/831663124150878208/831671588008493116/image0.png",
+        "about"                     :      "The Invisible Hand Trading Co. is the new and ambitious project of Vandalin Salt, fresh-faced newcomer to the city.\n\nWhen you enter, you are greeted by a highly organized array of goods, all spotless and well kept. The floors are swept and the tall young man behind the counter greets you cheerfully.\n\nVandalin Salt is always happy to make a deal; make him an offer! He particularly likes to deal in gems and rich artworks.\n\nThe shop’s inventory can be found here: https://docs.google.com/spreadsheets/d/1o6zR5V1HUCJ4nv9o7O0t0V4BXQfKrpy7iIpdPfG0DPM/",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759929524057276419>": {
+        "location"                  :      "Maroon Hall",
+        "location_type"             :      "Temple",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759929524057276419/760153413903843328/01-02.png",
+        "about"                     :      "A small yet sturdy building attached to the thasalla-garrison is home to the Seagate branch of the church of the Red Knight. It was founded and is still run by an elderly monk called Ravu the Bald. Red banners bearing the symbol of the goddess fly from its roof and a red carpet lines the floor of the interior. Instead of the usual temple layout, the inside of Maroon Hall is organized like a strategizing room, with maps lining its walls and tables. Books on histories of different wars and battles are kept in wooden bookshelves along with various figurines. Four sets of dragonchess are available to be used in the temple.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759934713275613194>": {
+        "location"                  :      "Paperbird Post",
+        "location_type"             :      "Building",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759934713275613194/759937882579664986/1-50.png",
+        "about"                     :      "The Paperbird Post is part post office, part gazette. It is the sole post office of Seagate and sends, receives, and organizes all mail that comes from and goes to the small town. The small wooden building is divided into two large chambers—the mail room and the writing room. One large printing press resides in the latter among three long tables full of stacks of paper and quills dipped in inkwells. That press is the pride and joy of the Paperbird Post Newspaper. The mail room has no such attraction, but is filled with carts overflowing with mail and tables full of envelopes and stamps. A small stable sits outside of the Post, containing horses and mules used for letter delivery and newspaper distribution.\n\nTo send a letter, it costs 1 sp per stamp and 2 cp per mile traveled to deliver it.\n\nDelivering a package requires one stamp per pound and costs 4 cp per mile traveled to deliver it.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759919480607473674>": {
+        "location"                  :      "Petalwood Pastries",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759919480607473674/760203015905869884/03-04-banquet-hall-p73.png",
+        "about"                     :      "A quaint, light-colored bakery sits among well-kept flowerbeds split by a clean stone path to its door. This sweet little sweet shop is run by a firbolg woman called Flower, who bakes all sorts of treats with utmost care. Flower is known for her hulking figure (which helps her give great hugs), pink aprons, and kind demeanor. ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#917639177556869130>": {
+        "location"                  :      "The Platinum Temple",
+        "location_type"             :      "Temple",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/800612037214076968/903113609700339822/l6hvfbacok2oa0x2ywtj.jpg",
+        "about"                     :      "Built by a high priest of Bahamut - Fenrir Silverheart of the Thasalla Guard - the Platinum Temple is a marvelous building of platinum, gold, and marble make, the exterior extensively decorated with elegant trims and pillars of gold and platinum, the large engraving on its front reading 'The Platinum Temple'. Inside the temple is no more than a simply furnished room full of pews which leads to a set of stairs towards a platform with a grand wall housing the symbol of Bahamut engraved upon it in platinum, and beneath it a speaker's desk with a small idol of the Platinum Dragon. Behind this grand wall a small and efficient planning room and office, thought by Fenrir to be useful to plan against the enemies of Bahamut. ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#757048768955940917>": {
+        "location"                  :      "Silven Supply Company",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/757048768955940917/757048969942532217/01-037.png",
+        "about"                     :      "A small, put-together shop run by a dark-haired former adventurer named Trilo Silven and his tiefling husband Spite sits near the center of Seagate. It is one of the most popular shops among adventurers and traders, selling anything from lanterns to food rations. NPC shop inventories refill every week on Saturday, so make sure to check back later if they're missing something you're looking for.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759929849820217374>": {
+        "location"                  :      "Silverhome",
+        "location_type"             :      "Temple",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759929849820217374/760177394609815572/231.png",
+        "about"                     :      "The Selûnites of Seagate built their temple on the northern side of the city. It is a simple gray-stone building with quartz pillars and statuettes, creating a soft yet formal temple that can fit up to one hundred and fifty patrons at a time, making it the second largest temple next to the <#759919590234652672>. It is very well organized and formal.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#767498251938955274>": {
+        "location"                  :      "The Silver Shark",
+        "location_type"             :      "Tavern",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/767498251938955274/767498612316962846/c1001.png",
+        "about"                     :      "The Silver Shark is a stone tavern and inn built in downtown Seagate. It's run by a half-elf named Henri Rosej and is known for the large silver-encased great white shark that hangs from the large ceiling of the pub. The building itself is three stories in addition to its wine cellar, but the two uppermost floors are lofts that overlook the main atrium of the tavern. It's one of the most popular spots in Seagate.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759934129432690689>": {
+        "location"                  :      "Thasalla Garrison",
+        "location_type"             :      "Building",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759934129432690689/759943944414035988/tod-06-01.png",
+        "about"                     :      "The Thasalla Garrison is home to the <@759943987552583750>, the soldier faction that protects the small town. It sits at the edge of <#756729525944975451>, another Thasalla property, and is a large, angular stone keep with ballista-armed battlement towers, a large stable, and an extensive interior set of barracks. It is a sturdy building meant for strategizing, training, and protecting. The majority of the fort is closed off to those who are not soldiers, but the lobby and a few meeting rooms can be used by visitors who seek to speak with the militia authority.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#789551863997399040>": {
+        "location"                  :      "The Greyforge",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://media.discordapp.net/attachments/789551863997399040/789551916740902933/315522_cn_wmask.png?width=500&height=321",
+        "about"                     :      "Contrary to the forge's name and general expectations of Seagate, The Greyforge is one of the most colorful buildings a person can come across in this little town. The exterior of The Greyforge could be explained as a regular building, but with multiple specific colors on specific items. The hanging sign nearby the partially blue-colored door had the symbol of Ioun, Goddess of Knowledge, on it. Such a bizzare sight is sure to attract many customers to the smithy.\n\nThe interior of the smithy is not much different from the exterior, being the same amount of colorful as the exterior. The work space for The Greyforge is behind the counter, while the walls are decorated by many weapons, armor and different kinds of tools for many types of uses. The smithy is well lit and the heat from the furnace at the back seeps through, making the entire building moderately warm.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@209263034714030080>. The shops's inventory can be found here: https://docs.google.com/spreadsheets/d/1EI-ZZiWAaprnX3gpkchSta8kHzS8Zhrrbi982CFhWBc",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#756993866422550578>": {
+        "location"                  :      "The Laughing Dragon",
+        "location_type"             :      "Tavern",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756993866422550578/757024194281078785/c1001.png",
+        "about"                     :      "One of the most interesting attractions in Seagate is The Laughing Dragon, a tavern that looks like three buildings of different makes all shoved together into one. It is a strange, towering thing run by an even stranger kobold by the name of Doredash Dimpinch along with her partner Lop Lop the grung and their many adopted children. She's old and oddly friendly for her race and has plenty of stories to tell about her past life of crime in Waterdeep.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#794474719395053588>": {
+        "location"                  :      "Valentino's",
+        "location_type"             :      "Tavern",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/794474719395053588/794477863008206858/image0.png",
+        "about"                     :      "Whether you are looking for Love or just a plate of spaghetti to soak up the booze from a night of drinking - Valentino's pub has what you seek. Pull up a chair for an evening of laughs, romance, music, gambling, fine dining and knife fights in a relaxed candlelit atmosphere. Do not let the slight smell of stale ale stop you from enjoying a plate of the best snake skewers this side of the Chionthar.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@241584652157059073> . The shops's inventory can be found here: https://docs.google.com/spreadsheets/d/1N4mnYpnswSdvCxq_rIWqjIphnl6ZccbXdtYPpJw14qE/",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#756729525944975451>": {
+        "location"                  :      "The Training Fields",
+        "location_type"             :      "Combat Zone",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756729525944975451/757050469188239471/twm3q-lr-009.png",
+        "about"                     :      "The Training Fields of Seagate are about half an acre of grassy, cleared-off, fenced-in land used by the Thasalla Guard as grounds for guard training, though during the day it is also open to residents of Seagate. The fields are divided into three sections by wooden fencing—the weighted fighting pit, the sparring field, and the place's namesake and biggest section, the training field. All of these divisions are monitored by members of the militia as well as their healers, who use any injured fighters as practice for their spells.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#789903548367503420>": {
+        "location"                  :      "The Training Fields",
+        "location_type"             :      "Combat Zone",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756729525944975451/757050469188239471/twm3q-lr-009.png",
+        "about"                     :      "The Training Fields of Seagate are about half an acre of grassy, cleared-off, fenced-in land used by the Thasalla Guard as grounds for guard training, though during the day it is also open to residents of Seagate. The fields are divided into three sections by wooden fencing—the weighted fighting pit, the sparring field, and the place's namesake and biggest section, the training field. All of these divisions are monitored by members of the militia as well as their healers, who use any injured fighters as practice for their spells.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#792978609270292480>": {
+        "location"                  :      "The Training Fields",
+        "location_type"             :      "Combat Zone",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756729525944975451/757050469188239471/twm3q-lr-009.png",
+        "about"                     :      "The Training Fields of Seagate are about half an acre of grassy, cleared-off, fenced-in land used by the Thasalla Guard as grounds for guard training, though during the day it is also open to residents of Seagate. The fields are divided into three sections by wooden fencing—the weighted fighting pit, the sparring field, and the place's namesake and biggest section, the training field. All of these divisions are monitored by members of the militia as well as their healers, who use any injured fighters as practice for their spells.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763093185362657281>": {
+        "location"                  :      "The Streets",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763093185362657281/763423673453117480/6001.png",
+        "about"                     :      "Outside of the more concentrated area of Seagate is the spaced out area of Outer Seagate, sometimes just called Outgate. Home to those who farm and own larger plots of land, Outer Seagate is the closest you can get to nature without entering the real Wilderness.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763093240572149790>": {
+        "location"                  :      "The Streets",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763093185362657281/763423673453117480/6001.png",
+        "about"                     :      "Outside of the more concentrated area of Seagate is the spaced out area of Outer Seagate, sometimes just called Outgate. Home to those who farm and own larger plots of land, Outer Seagate is the closest you can get to nature without entering the real Wilderness.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763422960757243963>": {
+        "location"                  :      "The Streets",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763093185362657281/763423673453117480/6001.png",
+        "about"                     :      "Outside of the more concentrated area of Seagate is the spaced out area of Outer Seagate, sometimes just called Outgate. Home to those who farm and own larger plots of land, Outer Seagate is the closest you can get to nature without entering the real Wilderness.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#799649252149297152>": {
+        "location"                  :      "Skye's Stables",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/799649252149297152/799649517695402004/QkE43G70nYjI2zYch-HRS_ix-hybgV0kzeGsCz5oW4AHRaQF-TYrm7ZP82D6UBAAs8-1Jj8rnhw59hm4nqA1nI_MqRJAeGc29U_y.png",
+        "about"                     :      "At the edge of the <#759932912979148830> rests a large, fenced-in expanse of grassy land set aside for mounts to graze, run, and live on. A friendly aasimar named Owen Skye and his Yuan-Ti husband Szesa reside in the small cottage at the top of the gently rolling hill adjacent to the stable building; though Owen can usually be found either at the stables tending to the horses or helping out at the homestead breaking them. The stables themselves are large and crafted out of wood, with a hay-thatched roof. They house the many mounts Owen rears, purchases, and sells, most of which end up with the Thasalla Guard. You can rent a stable space here to keep your mount, which costs 20 gp a year. Shop inventories refill every week.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759932912979148830>": {
+        "location"                  :      "Rosecork Gardens",
+        "location_type"             :      "Park",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759932912979148830/760148717013172264/c2-13.png",
+        "about"                     :      "At the southern edge of town is a well-kept park. It is relatively small, though it is a popular place for picnics and walks due to its clear view of the ocean and its healthy rosecork trees. Beautiful flowers and shrubs are kept in this garden, attracting many butterflies, and pebbled paths split flowerbeds into different sections.  Some believe there is a wild miniature giant space hamster residing somewhere in the gardens, but no one has ever been able to find it.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759930418127831121>": {
+        "location"                  :      "Gold Coin Outpost",
+        "location_type"             :      "Temple",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759930418127831121/760177554295357520/231.png",
+        "about"                     :      "The temple of Waukeen is a wooden cabin accented with brass. It is lit by framed glass windows and extravagant lamps, which cause all of the assorted gold figurines and idols stored within to shine. While the cabin itself is small, the interior is set up to be a center of trading and meeting. Different tables are home to objects for sale and figurines of Waukeen dot the decor.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#767508366297137202>": {
+        "location"                  :      "Woodworth's",
+        "location_type"             :      "Cafe",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/767508366297137202/767516698324238336/ud5xx-00-01.png",
+        "about"                     :      "Woodworth's is a small lunch cafe dedicated to maintaining a quiet, work-friendly environment while allowing patrons to have lunch and work on whatever writing or research they desire. Only calm, classical instrumental music is played here. It is owned by an elderly human named Jarshic. The building itself is small and has many windows to allow the shop to be mostly lit by sunlight during the day, and the interior is lined with flat tables and cushioned chairs. A lunch counter sits at the far wall and is often manned by one or two workers.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#790642121606168647>": {
+        "location"                  :      "Maryyann Homestead",
+        "location_type"             :      "Farm",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/790642121606168647/790642806032695326/skt02-06.png",
+        "about"                     :      "A sizable farm just outside the limit of Seagate, owned and operated by a kind family of halflings, they Maryyanns. These farms supply a significant amount of the food Seagate needs, from crops to cattle. Though they’re well equipped to handle most chores on their own, they’ll never turn down a little help from an adventurer or two. It’s always funny to see them get bucked off a horse.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759933756672180224>": {
+        "location"                  :      "Oldrest Cemetery",
+        "location_type"             :      "Quiet Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759933756672180224/759946515027460096/9009.png",
+        "about"                     :      "This small stretch of green grass and chiseled headstones is home to all those who passed away while in or around Seagate. It sits behind the <#759932912979148830>, though their paths intertwine. While there aren't any large monoliths or tombs yet, one large stone fountain sits at the relative middle of the cemetery. The fountain is in the shape of a large basin with a skeletal hand clutching a balance rising from the center—the symbol of the god of death, Kelemvor. Water pours from the palm of the hand. The entire cemetery is cared for by the elderly tortle Seeley Snapmaw, a spore druid who has lived on this land for longer than anyone can remember.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763093461116649472>": {
+        "location"                  :      "Seagate Brewing and Fermenting Company Brewery",
+        "location_type"             :      "Tavern",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763093461116649472/763093567958679552/c1001.png",
+        "about"                     :      "Marnaith-owned SB&F Co.'s home base is their brewery, a large building that serves as a popular spot to purchase Seagate's best meads, ales, and beers. It is two stories and a basement, though the upper floor is a loft. The basement is a deep set of wine cellars and storage units and the ground and upper floors are used for brewing, fermenting, and bottling.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#756731226198507661>": {
+        "location"                  :      "The Docks",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756731226198507661/757027617198047292/7002.png",
+        "about"                     :      "The ocean is the lifeline of Seagate—transportation, fishing, trade...it does it all! This means the docks of Seagate are almost always crowded with those coming, going, and everything inbetween. The docks themselves are well-built and made of wood, iron, and stone and are in good condition due to their relative youth. Seagate's docks can fit about ten galleons'-worth of ships, but are always expanding.",
+        "map_image"                 :      "https://cdn.discordapp.com/attachments/788661776749035571/793744684454379520/MAP_MAP.jpg",
+        "size"                      :      "40x40"
+    },
+    "<#763422995955449926>": {
+        "location"                  :      "The Docks",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756731226198507661/757027617198047292/7002.png",
+        "about"                     :      "The ocean is the lifeline of Seagate—transportation, fishing, trade...it does it all! This means the docks of Seagate are almost always crowded with those coming, going, and everything inbetween. The docks themselves are well-built and made of wood, iron, and stone and are in good condition due to their relative youth. Seagate's docks can fit about ten galleons'-worth of ships, but are always expanding.",
+        "map_image"                 :      "https://cdn.discordapp.com/attachments/788661776749035571/793744684454379520/MAP_MAP.jpg",
+        "size"                      :      "40x40"
+    },
+    "<#763423040313753632>": {
+        "location"                  :      "The Docks",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756731226198507661/757027617198047292/7002.png",
+        "about"                     :      "The ocean is the lifeline of Seagate—transportation, fishing, trade...it does it all! This means the docks of Seagate are almost always crowded with those coming, going, and everything inbetween. The docks themselves are well-built and made of wood, iron, and stone and are in good condition due to their relative youth. Seagate's docks can fit about ten galleons'-worth of ships, but are always expanding.",
+        "map_image"                 :      "https://cdn.discordapp.com/attachments/788661776749035571/793744684454379520/MAP_MAP.jpg",
+        "size"                      :      "40x40"
+    },
+    "<#758351601496227841>": {
+        "location"                  :      "Kraken's Quarry",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/758351601496227841/758351678532616252/c1001.png",
+        "about"                     :      "What appears to be a regular merchant barge is actually a happy tavern within. Kraken's Quarry is a small, cozy pub built inside of a ship that remains docked at the edge of Seagate's docks during the summer, fall, and winter. It is both the living and working place of a gruff, retired dwarven sailor named Barnom Bonesail, the barkeep and owner of the Quarry. Patrons are only permitted in the below-decks tavern, which has the appearance of a regular pub, and a sectioned-off area on the deck for seating. During the spring, Barnom raises the anchor and sails to Baldur's Gate and sometimes Waterdeep to try his business there and visit old friends.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#771799489761509428>": {
+        "location"                  :      "Igwe Smithy",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/771799489761509428/870836655169364018/315522_cn_wmask.png",
+        "about"                     :      "The exterior of Igwe Smithy is unassuming, with stone walls bearing faded and speckled paint. It sits on the end of a row of buildings and is recognizable for the brightly patterned cloth awning hanging outside. During business hours, the contrasting fabric on the ground beneath displays newly crafted weapons and armor.\n\nLooking around the free side of the building off to the right of the door is the smithing area. There’s a hearth of roughly hewn brick that rises up off and into a chimney to draw the smoke away. A large pair of bellows sits nearby to stoke the flames. The anvil and tools in the workspace are set up meticulously, the latter laid out on a work table along the building wall with a worn stool in front of it.\n\nEntering the shop through the door beside the awning, the most notable thing is how well lit the building is. To the right of the door lies a small window that lets visitors look out to the forge. To the left along the wall, weapon racks are mounted on either side of another window looking onto the street. Light streams in from every direction. In the back-left corner of the room is the shopkeep’s counter that’s adorned with a multitude of small metal puzzles. Beyond that behind a veil of multicolored fabric lies a quiet, private room.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@513814176414826500>. The shops's inventory can be found here: https://docs.google.com/spreadsheets/d/10mUHSYDo1eCmviggUq0_qgm9E0LpQBkAjs7vA014z6A/edit?usp=sharing",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#794125103092858911>": {
+        "location"                  :      "The Eveningstar Observatory",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/794125103092858911/794298619783020574/image0.png",
+        "about"                     :      "The Eveningstar Observatory sits on a tall hillside, providing a breathtaking view of both Seagate and her vast coast. The exterior of the three story structure is made of stone the wooden door inscribed with a symbol of three silver stars, along with a large telescope poking out of the top of the tower. The interior consists of rows of shelves and display cases on both sides, various arcane and alchemical components on display to potential customers. Near the left a large bookcase sits, containing a generous amount of lore on celestial bodies and otherworldly creatures, in addition to an open index of constellations on a wooden pedestal. In the back of the room sits a polished wooden counter, behind which some of the more expensive products sit on display. More often than not, customers will find the owner, a white scaled Kobold dressed in worn mage’s robes, sitting on a small stool and reading a book, waiting for any customers and eager to answer any questions they may have. A winding set of stairs sits in the far right of the room behind the counter, presumably leading up to the second floor.\n\nThe second floor of the Observatory houses the young mage’s living quarters, in addition to her research area. Neatly organized bookshelves line the walls, along with a Kobold sized desk, nearly always piled high with stellar maps and ancient texts. To the left of the room sits a small bed, at the foot of which sits a wooden chest.\n\nThe final floor of the Observatory houses the tower’s massive telescope, the sides of which contain various arcane sensors and guides to assist the user in locating and divining celestial bodies. In the center of the dimly lit room is a stone table which, upon speaking the command word, will project an image of the stars and their patterns, causing a calm blue light to wash over the room.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@775110054969212939>. The shops's inventory can be found here: https://docs.google.com/spreadsheets/d/1vsEdh03lTK1QMM8CqjDnszbJVsvKzFyRHcX16H8fCCs/edit ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759933617077223424>": {
+        "location"                  :      "Castsand Beach",
+        "location_type"             :      "Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759933617077223424/759945236234895370/05-05-complications-on-the-dunes-p101.png",
+        "about"                     :      "Castsand Beach is the thin, rocky stretch of beach that Seagate's territory claims. It is difficult to get to due to the sheer cliffs Seagate is built on and is only about ten by fifty feet in area. Occasionally, one might find a traveling seafarer coming ashore on a rowboat or a fisherman casting a line from this small beach, but more often than not it is empty.",
+        "map_image"                 :      "https://cdn.discordapp.com/attachments/788661776749035571/888241513929273344/unknown.png",
+        "size"                      :      "18x16"
+    },
+    "<#763088480792084480>": {
+        "location"                  :      "Tharian Porthouse",
+        "location_type"             :      "Warehouse",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763088480792084480/763088851534086184/c1002.png",
+        "about"                     :      "Sitting on its own small pier, the @Tharian Porthouse is home to all goods that have been delivered to Seagate through the Tharian Coast Company and everything that's leaving through the company as well. It is a larger, wooden building filled with crates and barrels.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#812147296934428753>": {
+        "location"                  :      "Daisy's Daisies",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/812147296934428753/812147340457672705/little-flower-shop-betty-lou.png",
+        "about"                     :      "Nestled near The Eveningstar Observatory in the docks is a little flower shop run by the haughtiest little kobold you've ever seen. The flowers on display can be smelled from a way's away, drawing in customers to purchase various flowers or flower-scented goods such as soaps and perfumes.\n\nShould you choose to stay a while, the owner, Daisy, will be more than happy to listen to all of your problems and give plenty of self-important advice (as long as you don't mind that it will probably be shared as gossip with everyone else who comes in).\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@342094264223924224>.\n\nThe shops's inventory can be found here:  https://docs.google.com/spreadsheets/d/1cp_x_u6bgLEVCxFEgfMXBpLaTXrA848pZfwbfXguepU/",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#909911645516599316>": {
+        "location"                  :      "The Seabreeze Resort",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/767511420278931456/909915850507698217/IMG_3142.jpg",
+        "about"                     :      "Perched on the low, jutting coast of the sea is a small resort. With a grand ballroom and a cozy lodge, customers can enjoy an all-inclusive stay that comes with gourmet food, late-night reading and tea, rentable cabins, a pool, wilderness hikes, and even a children’s camp program. Whatever you desire - catering, events, or just a getaway - you can find it here, at Seabreeze.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@566079740591603714>\n\nThe shops's inventory can be found here: https://docs.google.com/spreadsheets/d/1W26oZGZUMCzRIaenEIAaYZg0kwa118Mt9ZLrHBgvcjM/edit?usp=sharing",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759925968818143255>": {
+        "location"                  :      "The Cavern",
+        "location_type"             :      "Main...Road...?",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759925968818143255/760153062777552926/24-01.png",
+        "about"                     :      "The large cavern that makes up Duskview is only lit by faint sunlight or torches that are occasionally lit by guards coming from or going to <#756577219555622972>, the jail of Seagate. Duskview is mostly empty except for rocky stalagmites and stalactites that line its floor and ceiling and the occasional building. It is large enough to still house a few Gloomcavern-born beasts, so it has not been truly settled yet.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759925987680452628>": {
+        "location"                  :      "The Cavern",
+        "location_type"             :      "Main...Road...?",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759925968818143255/760153062777552926/24-01.png",
+        "about"                     :      "The large cavern that makes up Duskview is only lit by faint sunlight or torches that are occasionally lit by guards coming from or going to <#756577219555622972>, the jail of Seagate. Duskview is mostly empty except for rocky stalagmites and stalactites that line its floor and ceiling and the occasional building. It is large enough to still house a few Gloomcavern-born beasts, so it has not been truly settled yet.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759935373400473600>": {
+        "location"                  :      "The Cavern",
+        "location_type"             :      "Main...Road...?",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759925968818143255/760153062777552926/24-01.png",
+        "about"                     :      "The large cavern that makes up Duskview is only lit by faint sunlight or torches that are occasionally lit by guards coming from or going to <#756577219555622972>, the jail of Seagate. Duskview is mostly empty except for rocky stalagmites and stalactites that line its floor and ceiling and the occasional building. It is large enough to still house a few Gloomcavern-born beasts, so it has not been truly settled yet.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759925940645134357>": {
+        "location"                  :      "The Hot Springs",
+        "location_type"             :      "Good Time",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759925940645134357/760107939901341726/06-003.png",
+        "about"                     :      "",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#923446396152066079>": {
+        "location"                  :      "Castle Kono",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/923446396152066079/923728963774332968/IMG_3618.jpg",
+        "about"                     :      "Nestled amongst a grove of flowering wisteria, cherry blossoms, and flourishing cypress, a moss-covered castle rises from the earth. A waterfall cuts through vast gardens, stepping stones lead through ivy-covered walls to the central temple. Greenhouses flank it, its tiers reaching into the sky, strung with beautiful plants, colourful fungi, and aromatic mold. Stray cats and other animals rove the area.\n\nThis is a player owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@566079740591603714>.\n\nThe shop’s inventory can be found here: https://docs.google.com/spreadsheets/d/1hwF7yeiRONFxAGgIn1PuZLhuTtVMaO1kHh5Bhab-UHI/edit",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#756577219555622972>": {
+        "location"                  :      "Redemil",
+        "location_type"             :      "Gaol",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756577219555622972/757029747946422392/xef0g-03-15.png",
+        "about"                     :      "A small, dark building carved into the stone walls of Duskview is home to Seagate's only jail, Redemil. It is heavily guarded and serves both as a prison and as the last threshold between Duskview and the Gloomcaverns, as it is built right at the entrance to the mysterious tunnels. Guards are posted here both to keep an eye on prisoners and handle anything that climbs out of the Caverns.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759937492068990976>": {
+        "location"                  :      "The Sea of Swords",
+        "location_type"             :      "Sea",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759937492068990976/760176170636935178/9ogdg-lr-002.png",
+        "about"                     :      "The Sea of Swords is a region of the Trackless Sea that separates the western coast of Faerûn (known as the Sword Coast) from the Nelanther Isles and the Moonshae Isles.\n\n*This is a channel only accessible by those who can breathe water or those who are aboard ships.*",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#911142037166907432>": {
+        "location"                  :      "The Far Oceans",
+        "location_type"             :      "Big Ocean",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/911142037166907432/911142489388363787/6uS3fzk9Izyx7c-cTP_jxf4JMY8--r7gGUbcSmue3uM.jpg",
+        "about"                     :      "Perhaps situated farther than the Moonshae Isles or farther south than Calimshan, the Far Oceans are certainly ripe with the stench of adventure!",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759937423924527124>": {
+        "location"                  :      "Obelath's Oddities",
+        "location_type"             :      "Weird Magic Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759937423924527124/760171358851694642/poa05-08.png",
+        "about"                     :      "Beneath the surface of the Sea of Swords is an extensively decorated underwater cave that is home to a curious triton hermit named Obelath. He is a jeweler, alchemist, and hoarder, and while he prefers to be by himself, he might be willing to trade exchange goods with those he deems friends. His inventory is never kept track of...you get what you get here.\n\n*This is a channel only accessible by those who can breathe water.*",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#760169249695596564>": {
+        "location"                  :      "The Reefshredder",
+        "location_type"             :      "Very Dangerous Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/760169249695596564/820830289848827914/skt10-01.png",
+        "about"                     :      "The sunken shipwreck of an old sailing ship called Reefshredder sits at the bottom of the ocean near Seagate. It is home to different minor sea monsters and any treasure they collect.\n\n*This is a channel only accessible by those who can breathe water.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763792096560939049>": {
+        "location"                  :      "The Woods",
+        "location_type"             :      "Spooky Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763792096560939049/763793699783966800/poa06-20.png",
+        "about"                     :      "The buzz of insects and distant animal calls fill the wilds outside of Seagate. This uncharted territory is home to strange creatures and stranger people, if you come across any.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763792137593552897>": {
+        "location"                  :      "The Woods",
+        "location_type"             :      "Spooky Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763792096560939049/763793699783966800/poa06-20.png",
+        "about"                     :      "The buzz of insects and distant animal calls fill the wilds outside of Seagate. This uncharted territory is home to strange creatures and stranger people, if you come across any.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#763792169433432074>": {
+        "location"                  :      "The Woods",
+        "location_type"             :      "Big Forest",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/763792096560939049/763793699783966800/poa06-20.png",
+        "about"                     :      "The buzz of insects and distant animal calls fill the wilds outside of Seagate. This uncharted territory is home to strange creatures and stranger people, if you come across any.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#756271847791919144>": {
+        "location"                  :      "The Coast Way",
+        "location_type"             :      "Main Road",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/756271847791919144/757029356370657310/02-04.png",
+        "about"                     :      "The Coast Way of the section of the Trade Way along the coastline between Baldur's Gate and Tethyr. It brings a lot of traders and settlers to Seagate in spring and summer and is the keystone of a lot of the town's income and growth.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#820645033203335218>": {
+        "location"                  :      "Dad's Emporium",
+        "location_type"             :      "Shop",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/820645033203335218/820645123427139595/bb757ce79cc735ee5674df553b4bbe3d.png",
+        "about"                     :      "Dad's Emporium is a stone and wood structure inside the mouth of a large cave in the woods. Once inside, it feels very homely, more than a shop with what at first glance appears to be a very large open plan living space decorated by shelving, with a lounge room by the fire, a dining room next to that, and a small kitchenette off to the side with a door leading deeper into the structure. The more you look around the more you see the various wonders, potions and knickknacks, that Dad has collected and is selling, filling the shelves.\n\nSurprisingly, the owner of the store isn't a conventional 'Dad', but a shy High-Elf named Faris. Sitting behind the oversized counters with the aid of large pillows, she often reads books in the face of the broad opening of the emporium. \n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is <@141742855486963712>.\n\nThe shops's inventory can be found here: https://docs.google.com/spreadsheets/d/1f2EuVdfc1EwcUcJ1_Ueuq0gZ9YAOQ4HGWiF1fp05CUo/edit?usp=sharing",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#758340425232285707>": {
+        "location"                  :      "Wood of Sharp Teeth",
+        "location_type"             :      "Spooky Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/758340425232285707/758340717092798474/2-17.png",
+        "about"                     :      "The Wood of Sharp Teeth, formerly called the Glimmerwood, is a dense forest south of the River Chionthar, southeast of Baldur's Gate and southwest of Scornubel. It is a wilderness except for Durlag's Tower on the forest's southern edge. Uldoon Trail was the nearest route to the forest. The forest is home to satyrs, dryads, and a small number of werewolves.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#803477715591626793>": {
+        "location"                  :      "Band of the Drake Camp",
+        "location_type"             :      "A Guild Hall",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/803477715591626793/803477940456652800/image0.png",
+        "about"                     :      "Settled on a patch of wilderness bordering the sea some distance from Seagate, this fortified camp is home to a number of local sellswords. On its inland side, the camp is surrounded by wooden walls and guard towers, along with outward-facing log spikes to deter any potential attackers. The housing within is little more than a collection of tents, some larger than others for the band's leaders, but nonetheless a very improvised setup. In the center of these tents there is also a sparring ring open to any wishing to test their might, whether they be outsiders or part of the band itself. And if they are newcomers, rest assured the leaders will be watching for new talent. The backside of the camp is less fortified, as it faces the sea, and it is here the earth slopes down to a small inlet where any vessels associated with the Drakes may beach.\n\nThough usually entrance will be denied to anyone but affiliates, exceptions are made for those seeking to employ the mercenaries for expeditions, protection, or simply labor. Additionally, warriors of all kinds are welcome to demonstrate their skill in combat against one another or one of the Drakes. Should they prove themselves competent fighters, they just might have a new job opportunity on their hands. But for all others, it's best not to venture too close. A camp full of blades and bows at the ready isn't the best place for sightseeing.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#890588936622178304>": {
+        "location"                  :      "Safe Haven",
+        "location_type"             :      "Cafe",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/890588936622178304/890597831025508452/awesome2.png",
+        "about"                     :      "Far away from the busy docks, the loud taverns and the buzzling streets of Seagate, located admidst the wilderness outside the town's reaches is the small Café 'Safe Haven'. This peaceful, little establishment is surrounded by a garden displaying both flowers, herbs and all kinds of vegetables, which are harvested regularly and used for several dishes. There are tables with chairs or benches dotted about the garden as well as on the terrace, which is covered by a natural roof of leaves and twigs, which have grown around a skeleton of wooden planks to keep customers dry and warm. The interior of the Café consists of a wide area with even more available seats. Purple Wisertia vines hang from the ceiling, a fireplace is built into one of the walls to keep the area always warm and comfortable, even during harsh winters. Behind a counter at the back of the establishment is a door to a large kitchen area, while a staircase to the left of the counter leads up to the living area of the owner.\n\nThis is a player-owned shop, so you must wait for the owner player to make purchases. The owner of this shop is @Hornet | Home/Caelynn/Isabelle.\n\nThe shops's inventory can be found here: https://docs.google.com/spreadsheets/d/1ajpOOncjhHtMVeydnv0g9hF2JmRKPFgCHX57ut6s1Kw/edit#gid=1979524051 ",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759220934157664296>": {
+        "location"                  :      "The Gloomcaverns",
+        "location_type"             :      "Deadly Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759220934157664296/759221642575740938/totyp-02-14.png",
+        "about"                     :      "The Gloomcaverns are a seemingly endless network of tunnels beneath both Seagate and Duskview. They have yet to be properly mapped, as it seems the pathways are always changing. Some believe there's a purple worm that lives within the Caverns, whose digging is the reason for the constant shifting, but no evidence has been procured yet.\n\nIt's known that the Gloomcaverns have some connection to the Underdark of Faerûn, but all ventures to discover this link have come up short, partially due to the copious amounts of resident monsters that often give delves into the Caverns a bitter end./n/nThis odd, endless environment of danger has attracted many the adventurer willing to try their luck in the deadly burrows. Hordes upon hordes of monsters await, some more civilized than others. One might have the chance to happen upon a civil stray drow or the kobold too stupid to know better, though this is rare. More often than not, those braving the Gloomcaverns are met with ferocious beasts willing to die rather than let their home be overrun by surface-dwellers.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#759220962734112838>": {
+        "location"                  :      "The Gloomcaverns",
+        "location_type"             :      "Deadly Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759220962734112838/759221929332178984/ooa02-03.png",
+        "about"                     :      "The Gloomcaverns are a seemingly endless network of tunnels beneath both Seagate and Duskview. They have yet to be properly mapped, as it seems the pathways are always changing. Some believe there's a purple worm that lives within the Caverns, whose digging is the reason for the constant shifting, but no evidence has been procured yet.\n\nIt's known that the Gloomcaverns have some connection to the Underdark of Faerûn, but all ventures to discover this link have come up short, partially due to the copious amounts of resident monsters that often give delves into the Caverns a bitter end./n/nThis odd, endless environment of danger has attracted many the adventurer willing to try their luck in the deadly burrows. Hordes upon hordes of monsters await, some more civilized than others. One might have the chance to happen upon a civil stray drow or the kobold too stupid to know better, though this is rare. More often than not, those braving the Gloomcaverns are met with ferocious beasts willing to die rather than let their home be overrun by surface-dwellers.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#https://discord.com/channels/754424610660810898/759220984598495252>": {
+        "location"                  :      "The Gloomcaverns",
+        "location_type"             :      "Deadly Place",
+        "location_image"            :      "https://cdn.discordapp.com/attachments/759220984598495252/759222180922916864/ooa02-01.png",
+        "about"                     :      "The Gloomcaverns are a seemingly endless network of tunnels beneath both Seagate and Duskview. They have yet to be properly mapped, as it seems the pathways are always changing. Some believe there's a purple worm that lives within the Caverns, whose digging is the reason for the constant shifting, but no evidence has been procured yet.\n\nIt's known that the Gloomcaverns have some connection to the Underdark of Faerûn, but all ventures to discover this link have come up short, partially due to the copious amounts of resident monsters that often give delves into the Caverns a bitter end./n/nThis odd, endless environment of danger has attracted many the adventurer willing to try their luck in the deadly burrows. Hordes upon hordes of monsters await, some more civilized than others. One might have the chance to happen upon a civil stray drow or the kobold too stupid to know better, though this is rare. More often than not, those braving the Gloomcaverns are met with ferocious beasts willing to die rather than let their home be overrun by surface-dwellers.",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    },
+    "<#>": {
+        "location"                  :      "",
+        "location_type"             :      "",
+        "location_image"            :      "",
+        "about"                     :      "",
+        "map_image"                 :      0,
+        "size"                      :      ""
+    }
+}
