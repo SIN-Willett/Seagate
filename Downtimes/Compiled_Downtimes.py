@@ -38,6 +38,9 @@ if args[0].isnumeric():
         err("There is no downtime saved to " + index)
     
     args = possible[index]
+
+    if len(args) >= 1:
+        args += &ARGS&[1:]
     
 strargs = str(args)
 DT = args[0]
