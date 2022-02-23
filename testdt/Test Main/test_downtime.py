@@ -52,19 +52,28 @@ num_checks = len(mods)
 dc = int(args[1])
 
 if (num_checks == 3 and dc not in [10, 15, 20, 25]) or (num_checks == 2 and dc not in [10, 15, 20]):
-    err("" + dc + " is not a valid DC for" + downtime_name)
+    err(f"{dc} is not a valid DC for {downtime_name}")
+
+rolls = []
+num_successes = 0
+tool = 0
 
 arg_space = args + ' '
 pars = argparse(arg_space).last
 
 # roll
 for i in range(num_checks):
-    if "-b" + (i + 1) in args or "-bonus" + (i + 1) in args:
-        bonus = pars("b" + (i + 1), pars("bonus" + (i + 1),""))
-        mods[i] = int(int(mods[i]) + int(bonus))
-    if "adv" in args or "adv" + (i + 1) in args:
+    if f"-b{i + 1}" in args or f"-bonus{i + 1}" in args:
+        bonus = pars(f"b{i + 1}", None, int) or pars(f"bonus{i + 1}", None, int) or 0
+        mods[i] = mods[i] + bonus
+
+    if "-b" in args or "-bonus"  in args:
+        bonus = pars("b", None, int) or pars("bonus", None, int) or 0
+        mods[i] = mods[i] + bonus
+
+    if "adv" in args or f"adv{i + 1}" in args:
         rolls.append(vroll(f"2d20kh1+{mods[i]}"))
-    elif "dis" in args or "dis" + (i + 1) in args:
+    elif "dis" in args or f"dis{i + 1}" in args:
         rolls.append(vroll(f"2d20kl1+{mods[i]}"))
     else:
         rolls.append(vroll(f"1d20+{mods[i]}"))
@@ -72,7 +81,6 @@ for i in range(num_checks):
 roll_values = [roll.total for roll in rolls]
 
 guid_index = -1
-guid_text = ""
 guid_value = 0
 if "guid" in args:
     losses = [roll.total for roll in rolls if roll.total < dc]
@@ -84,20 +92,22 @@ if "guid" in args:
     index = roll_values.index(best)
     guid_roll = vroll("+1d4[guidance]")
     guid_index = index
-    guid_text += guid_roll
     guid_value = guid_roll.total
 
-successes = sum(rolls[i].total + (guid_value if i == guid_index else 0) >= dc for i in range(num_checks))
+successes = [rolls[i].total + (guid_value if i == guid_index else 0) >= dc for i in range(num_checks)]
+num_successes = sum(successes)
 if sum(roll.result.crit == 1 for roll in rolls) > 0:
-    successes = num_checks 
+    num_successes = num_checks
+    successes = [True for i in range(num_checks)]
 
 # response
-output_text = '\n'
+output_text = ""
 for i in range(num_checks):
-    success = 'Success!' if rolls[i].total + (guid_value if i == guid_index else 0) >= dc else 'Failure!'
-    tab = "‎ " * ((len(checks[i]) * 2) + 2)
-    guid_success = "\n" + tab + guid_text + " = `" + (rolls[i].total + guid_value) + "`"
-    output_text += '**' + checks[i] + ':** ' + rolls[i]  + (guid_success if i == guid_index else "") + ' **' + success + '**\n'
+    tab = '‎ ' * ((len(checks[i]) * 2) + 2)
+    guidybuidy = f"""
+    {tab}{str(guid_roll).split(" =", 1)[0]} = `{(rolls[i].total + guid_value)}`""" if (i == guid_index) else ""
+    output_text += f"""
+    **{checks[i]}:** {rolls[i]}{guidybuidy} **{'Success!' if successes[i] else 'Failure!'}**"""
 
 crime = (num_checks == 3)
 strdc = str(dc)
@@ -110,13 +120,13 @@ total_earned = gp
 response = ""
 coin_response = f"You do have "
 if crime:
-    if not successes:
+    if not num_successes:
         response = f"If this wasn't a test you would now be wanted for a DC {vroll(f'{dc}+5').total} crime! Ping a moderator, and let an admin know to add you to the wanted board."
         total_earned = 0
         xp = 0
-    if successes == 1:
+    if num_successes == 1:
         response = f"If this wasn't a test you would now be wanted for your crimes! Ping a moderator, and let an admin know to add you to the wanted board."
-    if successes == 2:
+    if num_successes == 2:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
         total_xp = xp * level
@@ -125,11 +135,11 @@ if crime:
         total_xp = xp * level
         response = f"If this wasn't a test you would earn {xp} * {level} = {total_xp} XP and "
 else:
-    if not successes:
+    if not num_successes:
         response = f"If this wasn't a test you would earn no GP and no experience."
         total_earned = 0
         xp = 0
-    if successes == 1:
+    if num_successes == 1:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
         total_xp = xp * level
