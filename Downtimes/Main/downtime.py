@@ -50,7 +50,7 @@ for check in our_downtime:
 num_checks = len(mods)
 dc = int(args[1])
 
-if (num_checks == 3 and dc not in [10, 15, 20, 25]) or (num_checks == 2 and dc not in [10, 15, 20]):
+if (num_checks == 3 and dc not in range(10, 26, 5)) or (num_checks == 2 and dc not in range(10, 21, 5)):
     err("" + dc + " is not a valid DC for" + downtime_name)
 
 rolls = []
@@ -125,6 +125,8 @@ if crime:
         xp = 0
     if num_successes == 1:
         response = f"You are now wanted for your crimes! Ping a moderator, and let an admin know to add you to the wanted board."
+        total_earned = 0
+        xp = 0
     if num_successes == 2:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
