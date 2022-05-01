@@ -150,7 +150,7 @@ else:
 total_xp = xp * level
 
 current_actions = character().get_cc(cc)
-xp_args = "" + total_xp + " |  " + cc + " (" + current_actions + "/" + actions + ")"
+xp_args = f" {total_xp} | {cc} ({current_actions}/{actions})"
 exp_cc = "Experience"
 xplog = load_json(get('xplog','{}'))
 timestamp = get("Timestamp")
@@ -163,6 +163,7 @@ char_xp = get_cc(exp_cc)
 xplog_response = f"You now have {char_xp} XP and your most recent xplog entry will be:"
 
 title = f'{name} does the crafting downtime for {item_name}'
+
 response_xp = ()
 if xp == 0:
     response_xp = f"You failed crafting and gain no xp"
