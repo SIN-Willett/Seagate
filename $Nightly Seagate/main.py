@@ -5,7 +5,7 @@ if not get("stats"):
 args = &&&
 downtime_name = str(args[0])
 if not args[1].isnumeric():
-    err(args[1] + " is not a valid DC for " + args [0])
+    err(f"{args[1]} is not a valid DC for {args [0]}")
 
 proficiency = "prof" in args
 expertise = "exp" in args
@@ -117,7 +117,6 @@ gp = data[strdc]["Gold"]
 total_xp = 0
 total_earned = gp
 response = ""
-coin_response = f"You now have "
 if crime:
     if not num_successes:
         response = f"You are now wanted for a DC {vroll(f'{dc}+5').total} crime! Ping a moderator, and let an admin know to add you to the wanted board."
@@ -172,6 +171,8 @@ total_sp = bags[i][1].sp
 total_cp = bags[i][1].cp
 character().set_cvar("bags", dump_json(bags))
 
+coin_response = f"You now have "
+
 if cp_gained != 0:
     response += f"{sp_gained} SP and {cp_gained} CP!"
     coin_response += f"{total_sp} SP and {total_cp} CP!"
@@ -182,50 +183,57 @@ else:
     response += f"{gp_gained} GP!"
     coin_response += f"{total_gp} GP!"
 
-xp_args = "" + total_xp + " | DC " + dc + " " + downtime_name + " downtime"
-exp_cc = "Experience"
-xplog = load_json(get('xplog','{}'))
-timestamp = get("Timestamp")
-xplog.update({timestamp:xp_args})
-set_cvar('xplog',dump_json(xplog))
-mod_cc(exp_cc,total_xp)
-
 char_xp = get_cc(exp_cc)
 
-def build_title(name, dt_name):
-    return {"title": f"{name} does the {downtime_name} downtime!"}
+def log_xp(xp_gained, message):
+    xplog = load_json(get('xplog','{}'))
 
-def build_description(dc, output_text):
-    return {"description": f"**DC:** {dc} {output_text}"}
-
-def build_footer(coin_response, bagcoin_response, char_xp, timestamp, xp_args):
-    build = f"{coin_response}\n\n"\
-    f"{bagcoin_response}\n\n"\
-    f"You now have {char_xp} XP and your most recent xplog entry will be:\n"\
-    f"{timestamp}: {xp_args}"
-    return {"footer" : build}
-
-def build_response():
-
-    response = {"response": 
-        {build_title(character().name, dt_name),
-        build_description(dc, output_text),
-        build_footer(coin_response, bagcoin_response, char_xp, timestamp, xp_args)
-        }
+    entry = {
+        get('Timestamp'): f" {xp_gained} | {message})"
     }
 
-    return response
+    xplog.update(entry)
+
+    set_cvar('xplog', dump_json(xplog))
+    mod_cc("Experience", xp_gained)
+
+    return entry
+
+def log_main_xp(main_context, xp_gained):
+    return log_xp(xp_gained, f"{total_xp} | DC {main_context['dc']}  {main_context['name']} downtime")
+
+def build_description(dc, num_checks, checks, guid_roll, rolls, guid_value, guid_index, successes):
+    tab = '‎ ' * ((len(checks[i]) * 2) + 2)
+    for i in range(num_checks):
+        guidybuidy = f"\n{tab}{str(guid_roll).split(' =', 1)[0]} = `{(rolls[i].total + guid_value)}`""" if (i == guid_index) else ""
+        description = f"**DC:** {dc} \n"\
+                    f"**{checks[i]}:** {rolls[i]}{guidybuidy} **{'Success!' if successes[i] else 'Failure!'}**"
+    
+    return f"{description}"
+
+def build_footer(coin_response, bagcoin_response, char_xp, timestamp, xp_args):
+    footer = f"{coin_response}\n\n" \
+            f"{bagcoin_response}\n\n" \
+            f"You now have {char_xp} XP and your most recent xplog entry will be:\n" \
+            f"{timestamp}: {xp_args}"
+    return footer
+
+def main(args):
+    
+    xp_entry = log_main_xp(main_context, xp)
+    title = f"{character().name} does the {main_context['name']} downtime!"
+    description = build_description(dc, num_checks, checks, guid_roll, rolls, guid_value, guid_index, successes)
+    footer = build_footer(coin_response, bagcoin_response, char_xp, timestamp, xp_args)
+
+    return title, description, footer
 
 </drac2>
 
--title "{{name}} does the {{downtime_name}} downtime!"
--desc "**DC:** {dc} {{output_text}}"
--footer "{{response}}
+{{title, description, footer = main(&&&)}}
 
-{{coin_response}}
-
-{{xplog_response}}
-{{timestamp}}: {{xp_args}}
+-title "{{title}}"
+-desc "{{description}}"
+-footer "{{footer}}
 
 Made by Omen & Sin"
 -color <color>
