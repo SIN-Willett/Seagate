@@ -1,6 +1,5 @@
 <drac2>
-# gvar a1adcea5-b563-4e8e-a546-9866919cc415
-# THIS IS A TEST
+# Gvar da0f7936-97bd-472c-b3fd-f72622df20e4
 if not get("stats"):
     err("Stats not set")
 args = &&&
@@ -52,7 +51,7 @@ num_checks = len(mods)
 dc = int(args[1])
 
 if (num_checks == 3 and dc not in range(10, 26, 5)) or (num_checks == 2 and dc not in range(10, 21, 5)):
-    err(f"{dc} is not a valid DC for {downtime_name}")
+    err("" + dc + " is not a valid DC for" + downtime_name)
 
 rolls = []
 num_successes = 0
@@ -71,9 +70,9 @@ for i in range(num_checks):
         bonus = pars("b", None, int) or pars("bonus", None, int) or 0
         mods[i] = mods[i] + bonus
 
-    if "adv" in args or f"adv{i + 1}" in args:
+    if "adv" in args or "adv" + (i + 1) in args:
         rolls.append(vroll(f"2d20kh1+{mods[i]}"))
-    elif "dis" in args or f"dis{i + 1}" in args:
+    elif "dis" in args or "dis" + (i + 1) in args:
         rolls.append(vroll(f"2d20kl1+{mods[i]}"))
     else:
         rolls.append(vroll(f"1d20+{mods[i]}"))
@@ -118,37 +117,37 @@ gp = data[strdc]["Gold"]
 total_xp = 0
 total_earned = gp
 response = ""
-coin_response = f"You do have "
+coin_response = f"You now have "
 if crime:
     if not num_successes:
-        response = f"If this wasn't a test you would now be wanted for a DC {vroll(f'{dc}+5').total} crime! Ping a moderator, and let an admin know to add you to the wanted board."
+        response = f"You are now wanted for a DC {vroll(f'{dc}+5').total} crime! Ping a moderator, and let an admin know to add you to the wanted board."
         total_earned = 0
         xp = 0
     if num_successes == 1:
-        response = f"If this wasn't a test you would now be wanted for your crimes! Ping a moderator, and let an admin know to add you to the wanted board."
+        response = f"You are now wanted for your crimes! Ping a moderator, and let an admin know to add you to the wanted board."
         total_earned = 0
         xp = 0
     if num_successes == 2:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
         total_xp = xp * level
-        response = f"If this wasn't a test you would earn {xp} * {level} = {total_xp} XP and "
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
     else:
         total_xp = xp * level
-        response = f"If this wasn't a test you would earn {xp} * {level} = {total_xp} XP and "
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
 else:
     if not num_successes:
-        response = f"If this wasn't a test you would earn no GP and no experience."
+        response = f"You earn no GP and no experience."
         total_earned = 0
         xp = 0
     if num_successes == 1:
         total_earned = (gp * 0.5)
         xp = int(xp * 0.5)
         total_xp = xp * level
-        response = f"If this wasn't a test you would earn {xp} * {level} = {total_xp} XP and "
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
     else:
         total_xp = xp * level
-        response = f"If this wasn't a test you would earn {xp} * {level} = {total_xp} XP and "
+        response = f"You earn {xp} * {level} = {total_xp} XP and "
 
 gp_gained = floor(total_earned)
 sp_gained = floor((total_earned - gp_gained) * 10)
@@ -164,9 +163,14 @@ for bag in bags:
 if i == len(bags):
     err("you have no coin pouch")
 
+bags[i][1]['cp'] = int(bags[i][1]['cp'] + cp_gained)
+bags[i][1]['sp'] = int(bags[i][1]['sp'] + sp_gained)
+bags[i][1]['gp'] = int(bags[i][1]['gp'] + gp_gained)
+
 total_gp = bags[i][1].gp
 total_sp = bags[i][1].sp
 total_cp = bags[i][1].cp
+character().set_cvar("bags", dump_json(bags))
 
 if cp_gained != 0:
     response += f"{sp_gained} SP and {cp_gained} CP!"
@@ -178,21 +182,50 @@ else:
     response += f"{gp_gained} GP!"
     coin_response += f"{total_gp} GP!"
 
+xp_args = "" + total_xp + " | DC " + dc + " " + downtime_name + " downtime"
+exp_cc = "Experience"
+xplog = load_json(get('xplog','{}'))
+timestamp = get("Timestamp")
+xplog.update({timestamp:xp_args})
+set_cvar('xplog',dump_json(xplog))
+mod_cc(exp_cc,total_xp)
 
-char_xp = get_cc("Experience")
+char_xp = get_cc(exp_cc)
 
-xplog_response = f"You now have {char_xp} XP"
+def build_title(name, dt_name):
+    return {"title": f"{name} does the {downtime_name} downtime!"}
+
+def build_description(dc, output_text):
+    return {"description": f"**DC:** {dc} {output_text}"}
+
+def build_footer(coin_response, bagcoin_response, char_xp, timestamp, xp_args):
+    build = f"{coin_response}\n\n"\
+    f"{bagcoin_response}\n\n"\
+    f"You now have {char_xp} XP and your most recent xplog entry will be:\n"\
+    f"{timestamp}: {xp_args}"
+    return {"footer" : build}
+
+def build_response():
+
+    response = {"response": 
+        {build_title(character().name, dt_name),
+        build_description(dc, output_text),
+        build_footer(coin_response, bagcoin_response, char_xp, timestamp, xp_args)
+        }
+    }
+
+    return response
 
 </drac2>
 
--title "{{name}} tests the {{downtime_name}} downtime!"
--desc "**TEST DC:** {dc} {{output_text}}"
+-title "{{name}} does the {{downtime_name}} downtime!"
+-desc "**DC:** {dc} {{output_text}}"
 -footer "{{response}}
 
 {{coin_response}}
 
 {{xplog_response}}
-THIS IS A TEST
+{{timestamp}}: {{xp_args}}
 
 Made by Omen & Sin"
 -color <color>
