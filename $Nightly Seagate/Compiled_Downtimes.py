@@ -45,38 +45,34 @@ if args[0].isnumeric():
 
     if len(args) >= 1:
         args += &ARGS&[1:]
-    
-strargs = str(args)
-DT = args[0]
 
-if DT is "test":
+chosen_dt = args[0]
+
+if chosen_dt is "test":
         err("This is the live downtime alias, are you trying to use !testdt ?")
 
-def check_dt(dt_name):
-    if DT in dt_name:
-        return True
+def check_dt(chosen, dt_name):
+    return chosen in dt_name
 
-def do_dt(dt_address):
+def do_dt(dt_address, strargs):
     return get_gvar(dt_address).replace("&&&", strargs)
 
-if check_dt(["save"]):
-    return do_dt("83faff8e-8cdb-4758-9c36-a7882279dfea")
+def find_dt(chosen, dt_gvars):
+    for gvar, dt in dt_gvars.items():
+        if check_dt(chosen, dt):
+            return do_dt(gvar, str(args))
 
-if check_dt(["service"]):
-    return do_dt("e55f5a53-b70a-484d-a386-6acc350d2c0d")
+    return do_dt("da0f7936-97bd-472c-b3fd-f72622df20e4")
 
-if check_dt(["work", "working", "job"]):
-    return do_dt("99ae5250-5616-4847-8f27-3237cc4eb0b7")
-# 1231c3de-651d-4d19-abfe-185c09b785c7
 
-if check_dt(["craft", "crafting"]):
-    return do_dt("4bd5ceb6-e82f-4196-be25-988c6c4e2a3d")
+dt_gvars = {
+    "83faff8e-8cdb-4758-9c36-a7882279dfea": "save",
+    "e55f5a53-b70a-484d-a386-6acc350d2c0d": "service",
+    "99ae5250-5616-4847-8f27-3237cc4eb0b7": "working job", # 1231c3de-651d-4d19-abfe-185c09b785c7
+    "4bd5ceb6-e82f-4196-be25-988c6c4e2a3d": "crafting",
+    "585d1453-7303-44a5-b736-f707c2702b5e": "training",
+    "97d2dddb-2116-41e3-a312-44351619d3eb": "studying"
+}
 
-if check_dt(["train", "training"]):
-    return do_dt("585d1453-7303-44a5-b736-f707c2702b5e")
-
-if check_dt(["study", "studying"]):
-    return do_dt("97d2dddb-2116-41e3-a312-44351619d3eb")
-
-return do_dt("da0f7936-97bd-472c-b3fd-f72622df20e4")
+return find_dt(chosen_dt, dt_gvars)
 </drac2>
