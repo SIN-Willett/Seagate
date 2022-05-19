@@ -1,6 +1,6 @@
 tembed
 {{get_gvar("2c0daf9b-fc9e-47ee-bd7b-9850ac961d6f")}}
-{{create_cc_nx("Experience")}}
+{{character().create_cc_nx("Experience")}}
 {{calendar=load_json(get_gvar("1aec09a0-9e25-4700-9c2d-42d79cb0163b"))}}
 {{hourOffset=calendar.get('hourOffset',0)+int(get('timezone',0))}}
 {{baseYear=calendar.get("yearOffset",1970)}}
@@ -22,6 +22,10 @@ tembed
 {{timestamp=f'{day:02}.{month:02}.{str(year)[2:]} ({hour:02}:{minute:02}:{second:02})'}}
 {{character().set_cvar("Timestamp",timestamp)}} 
 <drac2>
+upgrade = load_json(get('dt_upgrade'))
+if upgrade is not 1:
+    err("Please run !upgrade")
+    
 ## The above timestamp generation is sourced from Derixyleth#0636 xplog alias
 args = &ARGS&
 ## This is to sub in a saved DT
@@ -55,6 +59,9 @@ if DT == "save":
 ## This is to run DTs
 if DT == "service":
     return get_gvar("e55f5a53-b70a-484d-a386-6acc350d2c0d").replace("&&&", strargs)
+
+if DT == "soup":
+    return get_gvar("535b9ea0-faa9-4aa1-a051-5a85a21be62e").replace("&&&", strargs)
 
 if DT in ["work", "working", "job"]:
     return get_gvar("1231c3de-651d-4d19-abfe-185c09b785c7").replace("&&&", strargs)

@@ -112,6 +112,17 @@ crime = (num_checks == 3)
 strdc = str(dc)
 data = load_json(get_gvar("cd374b66-bf6e-4ef9-ac64-d9e213a5c0cb"))["illegal" if crime else "legal"]
 
+xp_table = load_json(get_gvar("1735dc7f-fedd-4d83-8a37-584ca6c55d02"))
+
+exp_cc = "Experience"
+level = level
+next_level = level + 1
+message = ""
+
+if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+    message = f"\nYou have leveled up to {next_level}!"
+    level = next_level
+
 xp = data[strdc]["XP"]
 gp = data[strdc]["Gold"]
 total_xp = 0
@@ -153,24 +164,13 @@ gp_gained = floor(total_earned)
 sp_gained = floor((total_earned - gp_gained) * 10)
 cp_gained = int((((total_earned - gp_gained) * 10) - sp_gained) * 10)
 
-bags = load_json(get("bags"))
-i = 0
-for bag in bags:
-    if bag[0] == "Coin Pouch":
-        break
-    i = i + 1
+coins = character().coinpurse
+purse = coins.get_coins()
+coins.modify_coins(0, gp_gained, 0, sp_gained, cp_gained)
 
-if i == len(bags):
-    err("you have no coin pouch")
-
-bags[i][1]['cp'] = int(bags[i][1]['cp'] + cp_gained)
-bags[i][1]['sp'] = int(bags[i][1]['sp'] + sp_gained)
-bags[i][1]['gp'] = int(bags[i][1]['gp'] + gp_gained)
-
-total_gp = bags[i][1].gp
-total_sp = bags[i][1].sp
-total_cp = bags[i][1].cp
-character().set_cvar("bags", dump_json(bags))
+total_gp = purse["gp"] + gp_gained
+total_sp = purse["sp"] + sp_gained
+total_cp = purse["cp"] + cp_gained
 
 if cp_gained != 0:
     response += f"{sp_gained} SP and {cp_gained} CP!"
@@ -183,14 +183,13 @@ else:
     coin_response += f"{total_gp} GP!"
 
 xp_args = "" + total_xp + " | DC " + dc + " " + downtime_name + " downtime"
-exp_cc = "Experience"
 xplog = load_json(get('xplog','{}'))
 timestamp = get("Timestamp")
 xplog.update({timestamp:xp_args})
-set_cvar('xplog',dump_json(xplog))
-mod_cc(exp_cc,total_xp)
+character().set_cvar('xplog',dump_json(xplog))
+character().mod_cc(exp_cc,total_xp)
 
-char_xp = get_cc(exp_cc)
+char_xp = character().get_cc(exp_cc)
 
 xplog_response = f"You now have {char_xp} XP and your most recent xplog entry will be:"
 
@@ -201,7 +200,7 @@ xplog_response = f"You now have {char_xp} XP and your most recent xplog entry wi
 -footer "{{response}}
 
 {{coin_response}}
-
+{{message}}
 {{xplog_response}}
 {{timestamp}}: {{xp_args}}
 

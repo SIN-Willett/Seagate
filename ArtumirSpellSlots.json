@@ -1,0 +1,12 @@
+{
+    "1": {"ss_max": 4, "ss_current": 4},
+    "2": {"ss_max": 3, "ss_current": 3},
+    "3": {"ss_max": 3, "ss_current": 3},
+    "4": {"ss_max": 3, "ss_current": 3},
+    "5": {"ss_max": 2, "ss_current": 2},
+    "6": {"ss_max": 1, "ss_current": 1},
+    "7": {"ss_max": 0, "ss_current": 0},
+    "8": {"ss_max": 0, "ss_current": 0},
+    "9": {"ss_max": 0, "ss_current": 0},
+    "10": {"ss_max": 0, "ss_current": 0}
+}

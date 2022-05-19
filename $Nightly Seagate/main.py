@@ -99,15 +99,6 @@ if sum(roll.result.crit == 1 for roll in rolls) > 0:
     num_successes = num_checks
     successes = [True for i in range(num_checks)]
 
-# response
-output_text = ""
-for i in range(num_checks):
-    tab = '‎ ' * ((len(checks[i]) * 2) + 2)
-    guidybuidy = f"""
-    {tab}{str(guid_roll).split(" =", 1)[0]} = `{(rolls[i].total + guid_value)}`""" if (i == guid_index) else ""
-    output_text += f"""
-    **{checks[i]}:** {rolls[i]}{guidybuidy} **{'Success!' if successes[i] else 'Failure!'}**"""
-
 crime = (num_checks == 3)
 strdc = str(dc)
 data = load_json(get_gvar("cd374b66-bf6e-4ef9-ac64-d9e213a5c0cb"))["illegal" if crime else "legal"]

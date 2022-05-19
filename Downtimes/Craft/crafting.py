@@ -14,11 +14,7 @@ for craftableCategory, stuff in craftables.items():
         break
         
     for craftableName, craftableDetails in stuff.items():
-        if (inputcraft.lower() == craftableName.lower()):
-            item_name = craftableName
-            crafting_details = craftableDetails
-            crafting_type = craftableCategory
-        elif (inputcraft.lower() in craftableName.lower()):
+        if (inputcraft.lower() in craftableName.lower()):
             item_name = craftableName
             crafting_details = craftableDetails
             crafting_type = craftableCategory
@@ -66,7 +62,7 @@ cc = "Crafting: " + item_name
 
 ##makes counter if it doesn't already exist
 character().create_cc_nx(cc, 0, actions, None, None, 0)
-if (get_cc(cc) == actions) or (price == 0):
+if (character().get_cc(cc) == actions) or (price == 0):
     character().set_cc(cc, 0)
     
 ##cvar for tool to attribute matching
@@ -164,18 +160,28 @@ else:
         character().mod_cc(cc, +3)
         xp = 30
 
+xp_table = load_json(get_gvar("1735dc7f-fedd-4d83-8a37-584ca6c55d02"))
+
+exp_cc = "Experience"
+level = level
+next_level = level + 1
+message = ""
+
+if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+    message = f"\nYou have leveled up to {next_level}!"
+    level = next_level
+
 total_xp = xp * level
 
 current_actions = character().get_cc(cc)
 xp_args = "" + total_xp + " |  " + cc + " (" + current_actions + "/" + actions + ")"
-exp_cc = "Experience"
 xplog = load_json(get('xplog','{}'))
 timestamp = get("Timestamp")
 xplog.update({timestamp:xp_args})
-set_cvar('xplog',dump_json(xplog))
-mod_cc(exp_cc,total_xp)
+character().set_cvar('xplog',dump_json(xplog))
+character().mod_cc(exp_cc,total_xp)
 
-char_xp = get_cc(exp_cc)
+char_xp = character().get_cc(exp_cc)
 
 xplog_response = f"You now have {char_xp} XP and your most recent xplog entry will be:"
 
@@ -194,7 +200,7 @@ Your progress on crafting this is now __{{current_actions}}/{{actions}}__!
 -footer "{{response_xp}}
 
 This item costs {{round(cost, 2)}} GP to make and sells to players for {{price}} GP and to the void for {{sell}} GP!
-
+{{message}}
 {{xplog_response}}
 {{timestamp}}: {{xp_args}}
 

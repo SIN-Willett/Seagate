@@ -28,6 +28,17 @@ myroll = vroll(mydice)
 title = f'does the service downtime to {who}'
 output_text = '** Religion: **' + myroll + '\n'
 
+xp_table = load_json(get_gvar("1735dc7f-fedd-4d83-8a37-584ca6c55d02"))
+
+exp_cc = "Experience"
+level = level
+next_level = level + 1
+message = ""
+
+if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+    message = f"\nYou have leveled up to {next_level}!"
+    level = next_level
+
 possiblities = load_json(get_gvar("f5554176-d94a-4ba5-a735-425330f8f98c"))
 response = ""
 xp = 0
@@ -49,14 +60,13 @@ else:
 
 
 xp_args = "" + total_xp + " | Service downtime to " + who + " (Roll: " + myroll.result.total + ")"
-exp_cc = "Experience"
 xplog = load_json(get('xplog','{}'))
 timestamp = get("Timestamp")
 xplog.update({timestamp:xp_args})
-set_cvar('xplog',dump_json(xplog))
-mod_cc(exp_cc,total_xp)
+character().set_cvar('xplog',dump_json(xplog))
+character().mod_cc(exp_cc,total_xp)
 
-char_xp = get_cc(exp_cc)
+char_xp = character().get_cc(exp_cc)
 
 xplog_response = f"You gain {total_xp} XP and now have {char_xp} XP"
 
@@ -65,7 +75,7 @@ xplog_response = f"You gain {total_xp} XP and now have {char_xp} XP"
 -desc "{{output_text}}"
 -footer "{{response}}
 
-{{xplog_response}}
+{{xplog_response}}{{message}}
 Your most recent xplog entry will be:
 {{timestamp}}: {{xp_args}}
 

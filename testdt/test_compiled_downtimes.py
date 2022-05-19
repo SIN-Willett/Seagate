@@ -54,6 +54,9 @@ if args[0] == "save":
 if DT == "service":
     return get_gvar("4720b72e-77c9-4f7c-91df-fcb86efe897c").replace("&&&", strargs)
 
+if DT == "soup":
+    return get_gvar("3c673355-84ac-4497-8879-8a82143c0fa1").replace("&&&", strargs)
+
 if DT in ["work", "working", "job"]:
     return get_gvar("a74d17ca-00a8-4e43-9ceb-3eb35c5c0c9b").replace("&&&", strargs)
 

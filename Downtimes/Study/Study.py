@@ -20,7 +20,7 @@ study = possibilities[0][0]
 max_hours = possibilities [0][1]
 
 character().create_cc_nx(study,0,max_hours,None,0)
-if get_cc(study) == max_hours:
+if character().get_cc(study) == max_hours:
     character().set_cc(study, 0)
 
 character().mod_cc(study, +study_hours)
@@ -29,7 +29,7 @@ xp_args = "0 | Studying " + study + " for " + study_hours + " hours"
 xplog = load_json(get('xplog','{}'))
 timestamp = get("Timestamp")
 xplog.update({timestamp:xp_args})
-set_cvar('xplog',dump_json(xplog))
+character().set_cvar('xplog',dump_json(xplog))
 
 title = f' does the study downtime for {study}'
 response = f"After studying for **{study_hours}** hours your current progress on studying __{study}__ is now **{character().get_cc(study)}/{max_hours}**!"
