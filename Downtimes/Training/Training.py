@@ -85,9 +85,10 @@ level = level
 next_level = level + 1
 message = ""
 
-if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
-    message = f"\nYou have leveled up to {next_level}!"
-    level = next_level
+if level < 20:
+    if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+        message = f"\nYou have leveled up to {next_level}!"
+        level = next_level
 
 total_xp = (xp * level)
 xp_args = "" + total_xp + " | Training downtime for " + chosen_training

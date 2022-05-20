@@ -119,9 +119,10 @@ level = level
 next_level = level + 1
 message = ""
 
-if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
-    message = f"\nYou have leveled up to {next_level}!"
-    level = next_level
+if level < 20:
+    if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+        message = f"\nYou have leveled up to {next_level}!"
+        level = next_level
 
 xp = data[strdc]["XP"]
 gp = data[strdc]["Gold"]

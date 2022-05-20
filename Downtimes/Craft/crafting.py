@@ -114,6 +114,8 @@ sell = round((price * 0.75), 2)
 magic_item_adept = False
 if (rarity == "Common") or (rarity == "Uncommon"):
     magic_item_adept = True
+if (character().name.lower() is "Artumir") and (rarity != "Legendary"):
+    magic_item_adept = True
 registered = get("Guild")
 if "guild" in args or registered:
     cost = (cost * 0.75)
@@ -167,9 +169,10 @@ level = level
 next_level = level + 1
 message = ""
 
-if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
-    message = f"\nYou have leveled up to {next_level}!"
-    level = next_level
+if level < 20:
+    if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+        message = f"\nYou have leveled up to {next_level}!"
+        level = next_level
 
 total_xp = xp * level
 
