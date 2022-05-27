@@ -35,7 +35,7 @@ def sum_rewards(this, other):
     reward_add(this.msg, other.msg),
     reward_add(this.xp, other.xp),
     reward_add(this.gp, other.gp),
-    reward_add(this.items, other.items),
+    reward_add(this['items'], other['items']),
     this.r_cc)
 
 def split_coin(gold):
@@ -54,11 +54,11 @@ def split_coin(gold):
 
 def acquire_cc(my_cc):
   if not character().cc_exists(my_cc.name):
-    character().create_cc_nx(my_cc.name, maxVal=my_cc.max)
+    character().create_cc_nx(my_cc.name, maxVal=my_cc.max, initial_value=0)
 
   character().mod_cc(my_cc.name, my_cc.delta)
   curr = character().get_cc(my_cc.name)
-  max_val = character().get_max_cc(my_cc.name)
+  max_val = character().get_cc_max(my_cc.name)
 
   if curr >= max_val:
     character().delete_cc(my_cc.name)
@@ -74,7 +74,7 @@ def acquire_reward(my_reward, msg):
   gp, sp, cp = split_coin(my_reward.gp)
   character().coinpurse.modify_coins(0, gp, 0, sp, cp)
 
-  return log_entry
+  return my_reward, log_entry
 
 def get_reward(results, rewards):
   if 'nat20' in rewards:
@@ -101,12 +101,17 @@ def do_downtime(dt_name, checks, rewards, log_message, test_mode, guid):
   my_reward = get_reward(results, rewards)
 
   print(dt_title(dt_name, test_mode), '', stdtitle)
-  print(dt_reward(my_reward))
-  print(format_rolls(checks, results), '\n\n')
 
   if not test_mode:
-    log_entry = acquire_reward(my_reward, log_message)
-    print(f"XP Log updated:\n{dump_yaml(log_entry)}")
-    print(f'signature:\n{signature()}')
+    my_reward, log_entry = acquire_reward(my_reward, log_message)
+    print(dt_reward(my_reward))
+    if checks:
+      print(format_rolls(checks, results), '\n\n')
+    print(f"XP Log updated:\n{code_line(dump_yaml(log_entry))}")
+    print(f'signature:\n{code_line(signature())}')
+  else:
+    print(dt_reward(my_reward))
+    if checks:
+      print(format_rolls(checks, results), '\n\n')
 
 </drac2>

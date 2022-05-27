@@ -72,7 +72,7 @@ def find_best(checks, results):
   return get_highest_check(losses)
 
 def get_boosts(checks, rolled, guid):
-  if not guid:
+  if not guid or not rolled:
     return rolled
 
   total, best = find_best(checks, rolled)
@@ -102,6 +102,8 @@ def format_roll(check, rollset):
   return '\n'.join(chck_lines)
 
 def format_rolls(checks, results):
+  if not checks or not results:
+    return ""
   title = []
   if len(checks[0].dcs) == 1:
     title.append(f"**DC:** {checks[0].dcs[0]}")
