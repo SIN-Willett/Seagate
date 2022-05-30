@@ -11,11 +11,16 @@ import downtimes
 
 def main(args):
   if not args or len(args) < 2:
-    err(f'usage: {ctx.prefix}dt study topic hours [options]')
+    err(f'usage: {ctx.prefix}dt study [list] topic hours [options]')
   chosen_topic = args.pop(0)
-  hours = int(args.pop(0))
-  if hours < 0 or hours > 8:
-    err(f"hold on lemme ask Artumir for a time machine we're doing {int(hours * 7.5)}min/hr")
+  do_list = chosen_topic.lower() == 'list'
+  if do_list:
+    chosen_topic = args.pop()
+    hours = 0
+  else:
+    hours = int(args.pop(0))
+    if hours < 0 or hours > 8:
+      err(f"hold on lemme ask Artumir for a time machine we're doing {int(hours * 7.5)}min/hr")
 
   test_mode = 'test' in [arg.lower() for arg in args]
 
@@ -23,6 +28,9 @@ def main(args):
   possibilities = [(topic, hours) for (topic, hours) in topics.items() if chosen_topic.lower() in topic.lower()]
   if not possibilities:
     err(f"{chosen_topic} isn't a valid thing to study")
+  if do_list:
+    topics = [topic for topic, _ in possibilities]
+    err(", ".join(topics))
   chosen_topic = possibilities[0][0]
   max_hours = possibilities[0][1]
 
@@ -33,7 +41,7 @@ def main(args):
 
   rewards = {
     0: reward(
-      f"""after studying for {hours} hours your current progress on studying "{chosen_topic}" is now {total_hours}/{max_hours}!\n""",
+      f"""after studying for {hours} hours your current progress on studying "{chosen_topic}" is now {total_hours}/{max_hours} hours!\n""",
       0, None, None,
       reward_cc(
         topic_cc,
@@ -52,7 +60,8 @@ def main(args):
     test_mode,
     'guid' in args
   )
-  print(f' for {chosen_topic}!', '', stdtitle)
+  stdtitle.clear()
+  print(f'{character().name} studied {chosen_topic} for {hours}hr!', '', stdtitle)
 
 
 main(&&&)
