@@ -1,4 +1,7 @@
 !gvar edit bca66407-b5be-4daf-95a2-76e1dd412086
+from avrae import *
+from yaml import get_yaml
+
 <drac2>
 calendar = get_yaml('g/1aec09a0-9e25-4700-9c2d-42d79cb0163b')
 

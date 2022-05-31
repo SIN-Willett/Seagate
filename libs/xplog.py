@@ -1,4 +1,8 @@
 !gvar edit 9d001a76-700f-4df5-a213-311b930b3f0f
+from avrae import *
+from yaml import *
+from time import *
+
 <drac2>
 XP_CC_NAME = 'Experience'
 XPLOG_CVAR_NAME = 'xplog'

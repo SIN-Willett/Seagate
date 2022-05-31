@@ -1,4 +1,9 @@
 !gvar edit dd1b0175-c600-4ad6-bf4a-0708e3856722
+from avrae import *
+from stats import *
+from rewards import *
+from downtimes import *
+
 <drac2>
 def find_checks(dt_name, dc):
   all_dts = get_yaml("g/0d55e007-c9c3-43c8-b5b3-051353ed8797")
@@ -22,7 +27,6 @@ def base_reward(xp, gold):
   msg = f"you earn:\n{xp * level} XP ({xp}XP * {level}Lv)\n" \
         f"{' and '.join(coin_msgs)}!"
   return reward(msg, xp, gold)
-
 
 def legal_rewards(dc):
   dt_data = get_yaml("g/cd374b66-bf6e-4ef9-ac64-d9e213a5c0cb")

@@ -1,6 +1,8 @@
 !gvar edit f5318e22-c75c-460f-96b4-7985b1c2bbd7
-<drac2>
+from avrae import *
+from yaml import *
 
+<drac2>
 ETOOLS = get_yaml('eTools', [])
 PTOOLS = get_yaml('pTools', [])
 PLANGS = get_yaml('languages', [])

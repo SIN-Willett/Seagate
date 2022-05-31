@@ -1,6 +1,6 @@
-tembed <drac2>
-# Code for !module
-main_path = "3e98296d-6cca-4422-b414-735349e9f9f0"
+!alias xp tembed <drac2>
+# Code for XP
+main_path = "973373d5-1bf6-4a7a-9b46-afa802cfd4df"
 
 # register of installed libraries
 libs = load_yaml(get_gvar(get("import_path", "6b06857b-15d4-469e-a4d4-1c7e2915b1d9")))

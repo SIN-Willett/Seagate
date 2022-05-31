@@ -1,4 +1,7 @@
 !gvar edit c78f2204-e980-44f4-bd62-59d8ec55438a
+from avrae import *
+from files import *
+
 <drac2>
 def get_yaml(path, default=None):
   yaml = read_file(path)

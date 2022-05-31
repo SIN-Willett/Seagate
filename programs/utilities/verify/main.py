@@ -1,6 +1,8 @@
 !gvar edit e6deee16-b8dc-483d-9b7f-2f31d4d348d5
-<drac2>
+from avrae import *
 import files
+
+<drac2>
 
 def main(args):
 	if not args:

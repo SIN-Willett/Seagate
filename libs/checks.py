@@ -1,4 +1,7 @@
 !gvar edit 11519649-cd49-4e98-baa7-0ae8e3c67a48
+from avrae import *
+from stats import *
+
 <drac2>
 def load_check(stat_name, thresholds, args, check_num):
   parse = argparse(args).last
