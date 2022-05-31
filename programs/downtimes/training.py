@@ -1,11 +1,8 @@
 # !gvar edit 5e2b4ebe-2ed1-4c4a-8aff-8a833d2f4266
-import files
-import yaml
-import time
-import xplog
-import checks
-import stats
-import downtimes
+from files import *
+from downtimes import *
+from rewards import *
+from stats import *
 
 <drac2>
 def training_reward(chosen_training, training_cc, completed, actions, cc_delta, xp, cost, tier):
@@ -66,7 +63,6 @@ def main(args):
     cost = 5
     tier = 'fluency' if chosen_training in LANGS else 'proficiency'
 
-  if character()
   training_cc = f"Training: {chosen_training}"
   prev_training = get("DTtraining")
   prev_cc = f"Training: {prev_training}"

@@ -2,6 +2,7 @@
 from avrae import *
 from files import *
 from rewards import *
+from checks import *
 
 <drac2>
 

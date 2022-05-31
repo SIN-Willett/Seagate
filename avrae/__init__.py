@@ -150,3 +150,7 @@ def vroll(dice, multiply=1, add=0) -> SimpleRollResult:
   :rtype: :class:`~aliasing.api.functions.SimpleRollResult`
   """
   return _vroll(str(dice), int(multiply), int(add))
+
+
+def err(msg: str):
+  exit(1)

@@ -32,7 +32,7 @@ def compile_file(filepath):
       imported.append(module_name)
       main = main.replace(line, compile_file(gvar))
     else:
-      err('''Could not import module : "{module_name}"''')
+      err(f'''Could not import module : "{module_name}"''')
   return main
 
 # the final product

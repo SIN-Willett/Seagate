@@ -29,7 +29,7 @@ def reward_cc(cc_name, cc_delta, cc_max, cc_reward):
     if not character().cc_exists(self.name):
       character().create_cc_nx(self.name, maxVal=self.max, initial_value="0")
 
-    character().mod_cc(self.name, self.delta)
+    character().mod_cc(self.name, self.delta, True)
     curr = character().get_cc(self.name)
     max_val = character().get_cc_max(self.name)
 
