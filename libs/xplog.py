@@ -7,8 +7,18 @@ from time import *
 XP_CC_NAME = 'Experience'
 XPLOG_CVAR_NAME = 'xplog'
 
+
+def entries_to_lines(entries):
+	lines = []
+	for k, v in entries.items():
+		parts = v.split('|', 1)
+		x = int(parts[0].strip())
+		m = parts[1].strip()
+		lines.append((k, x, m))
+	return lines
+
 def xp_entries_to_str(entries):
-	return "\n".join([ f"{k[:8]} | {v}" for k, v in entries.items()])
+	return "\n".join([f"{k[:8]} | {v:7} | {m}" for k, v, m in entries_to_lines(entries)])
 
 def log_xp(xp, message):
 	entry = {get_timestamp(): f"{xp} | {message}"}

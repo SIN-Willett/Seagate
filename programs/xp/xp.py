@@ -30,7 +30,7 @@ def xp_set(args):
   print(f"{character().name} set {PRONOUNS[2]} xp to {xp}", '', stdtitle)
 
 def xp_chart(args):
-  lines = [f'{(i + 1) if i < 20 else " Godwoken":9}: {v}' for i, v in enumerate(LEVEL_THRESHOLDS)]
+  lines = [f'{(i + 1) if i < 20 else " Godwoken":9}: {v:,}' for i, v in enumerate(LEVEL_THRESHOLDS)]
   out = ['    level: XP Required ', ('-' * 9) + '+' + ('-' * 13)] + lines
   print(code_block('\n'.join(out), 'yaml'))
 
