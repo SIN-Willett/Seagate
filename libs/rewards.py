@@ -57,12 +57,14 @@ def reward(msg=None, xp=0, gp=None, special=None, r_cc=None):
 
   def add_reward(other):
     if not other:
-      pass
-
-    self['msg'] = add_part(self.msg, other.msg)
-    self['xp'] = add_part(self.xp, other.xp)
-    self['gp'] = add_part(self.gp, other.gp)
-    self['special'] = add_part(self.special, other.special)
+      return
+    new = {
+      'msg': add_part(self.msg, other.get('msg')),
+      'xp': add_part(self.xp, other.get('xp')),
+      'gp': add_part(self.gp, other.get('gp')),
+      'special': add_part(self.special, other.get('special'))
+    }
+    self.update(new)
 
   self['add'] = add_reward
 

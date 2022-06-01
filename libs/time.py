@@ -5,8 +5,11 @@ from yaml import get_yaml
 <drac2>
 calendar = get_yaml('g/1aec09a0-9e25-4700-9c2d-42d79cb0163b')
 
+def format_date(tm):
+	return f'{tm.day:02}.{tm.month:02}.{str(tm.year)[2:]}'
+
 def format_time(tm):
-	return f'{tm.day:02}.{tm.month:02}.{str(tm.year)[2:]} ({tm.hour:02}:{tm.minute:02}:{tm.second:02})'
+	return f'{format_date(tm)} ({tm.hour:02}:{tm.minute:02}:{tm.second:02})'
 
 def parse_time(t_since_epoch):
 	hourOffset = calendar.get('hourOffset', 0) + int(get_yaml('timezone', 0))
@@ -32,4 +35,7 @@ def parse_time(t_since_epoch):
 
 def get_timestamp():
 	return format_time(parse_time(time()))
+
+def get_datestamp():
+	return format_date(parse_time(time()))
 </drac2>

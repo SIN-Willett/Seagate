@@ -37,8 +37,7 @@ def do_downtime(dt_name, checks, rewards, log_message, test_mode, guid):
     print(dt_reward(my_reward))
     if checks:
       print(format_rolls(checks, results), '\n\n')
-    print(f"XP Log updated:\n{code_line(dump_yaml(log_entry))}")
-    print(f'signature:\n{code_line(signature())}')
+    add_field('signature:', f'{code_line(signature())}')
   else:
     print(dt_reward(my_reward))
     if checks:

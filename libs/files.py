@@ -4,6 +4,8 @@
 stddesc = []
 stdtitle = []
 stdfooter = []
+stdfields = {}
+stdthumb = []
 BACKTICK = '`'
 
 def read_file(path, default=None):
@@ -24,5 +26,19 @@ def code_line(line):
 
 def flush(file):
   return ''.join(file).replace('\"', '\\\"')
+
+def add_field(header, msg):
+  stdfields.update({header: msg})
+
+def format_fields():
+  lines = [f'-f "{k} | {v}"' for k, v in stdfields.items()]
+  return "\n".join(lines)
+
+def show_thumb():
+  stdthumb.clear()
+  stdthumb.append(f'-thumb <image>')
+
+def hide_thumb():
+  stdthumb.clear()
 
 </drac2>

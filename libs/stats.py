@@ -6,6 +6,7 @@ from yaml import *
 ETOOLS = get_yaml('eTools', [])
 PTOOLS = get_yaml('pTools', [])
 PLANGS = get_yaml('languages', [])
+PRONOUNS = [p.lower().strip() for p in get('pronouns', 'they/them/their').split('/', 2)]
 
 def _init_stat(mod, message=None, is_tool=False):
   return {'is_tool': is_tool, 'mod': mod, 'message': message}
@@ -34,7 +35,7 @@ TOOLS = INSTRUMENTS | {name: _init_tool(name, mod, msg) for name, mod, msg in [
   ("Dice Set", charismaMod, "is throwing dice"),
   ("Playing Card Set", charismaMod, "is playing cards"),
   ("Cobbler's Tools", dexterityMod, "is cobbling"),
-  ("Disguise Kit", dexterityMod, "has disguised themselves"),
+  ("Disguise Kit", dexterityMod, f"has disguised {PRONOUNS[1]}self"),
   ("Glassblower's Tools", dexterityMod, "is glassblowing"),
   ("Jeweler's Tools", dexterityMod, "is working on jewelery"),
   ("Potter's Tools", dexterityMod, "is working on pottery"),
@@ -70,7 +71,7 @@ SKILLS = { name: _init_stat(mod, msg) for name, mod, msg in [
   ("Animal Handling", character().skills.animalHandling.value, "is handling animals"),
   ("Perception", character().skills.perception.value, "is being perceptive"),
   ("Nature", character().skills.nature.value, "uses natural knowledge"),
-  ("Sleight of Hand", character().skills.sleightOfHand.value, "uses their quick fingers"),
+  ("Sleight of Hand", character().skills.sleightOfHand.value, f"uses {PRONOUNS[2]} quick fingers"),
   ("Survival", character().skills.survival.value, "is surviving"),
   ("Stealth", character().skills.stealth.value, "is stealthing"),
   ("Medicine", character().skills.medicine.value, "uses medicinal knowledge"),

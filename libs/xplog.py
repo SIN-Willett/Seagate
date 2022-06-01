@@ -7,8 +7,11 @@ from time import *
 XP_CC_NAME = 'Experience'
 XPLOG_CVAR_NAME = 'xplog'
 
+def xp_entries_to_str(entries):
+	return "\n".join([ f"{k[:8]} | {v}" for k, v in entries.items()])
+
 def log_xp(xp, message):
-	entry = {get_timestamp(): f'{xp} | {message}'}
+	entry = {get_timestamp(): f"{xp} | {message}"}
 
 	log = get_yaml(XPLOG_CVAR_NAME, {})
 
@@ -20,5 +23,10 @@ def log_xp(xp, message):
 
 	character().mod_cc(XP_CC_NAME, xp)
 
+	out = xp_entries_to_str(entry)
+	add_field("XP Log entry added:", f"{code_block(out)}")
 	return entry
+
+def get_xp():
+	return character().get_cc(XP_CC_NAME)
 </drac2>
