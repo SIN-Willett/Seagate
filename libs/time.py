@@ -1,9 +1,8 @@
 !gvar edit bca66407-b5be-4daf-95a2-76e1dd412086
-from avrae import *
-from yaml import get_yaml
+using(libs="02488881-7259-4a76-9362-828df7c35a07")
+using(yaml=libs.find_library("yaml"))
 
-<drac2>
-calendar = get_yaml('g/1aec09a0-9e25-4700-9c2d-42d79cb0163b')
+calendar = yaml.load('g/1aec09a0-9e25-4700-9c2d-42d79cb0163b')
 
 def format_date(tm):
 	return f'{tm.day:02}.{tm.month:02}.{str(tm.year)[2:]}'
@@ -38,4 +37,3 @@ def get_timestamp():
 
 def get_datestamp():
 	return format_date(parse_time(time()))
-</drac2>
