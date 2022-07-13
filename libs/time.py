@@ -11,7 +11,7 @@ def format_time(tm):
 	return f'{format_date(tm)} ({tm.hour:02}:{tm.minute:02}:{tm.second:02})'
 
 def parse_time(t_since_epoch):
-	hourOffset = calendar.get('hourOffset', 0) + int(get_yaml('timezone', 0))
+	hourOffset = calendar.get('hourOffset', 0) + int(yaml.load('timezone', 0))
 	baseYear = calendar.get('yearOffset', 1970)
 	leapCycle = calendar.get('leapCycle', 4)
 
