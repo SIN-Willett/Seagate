@@ -5,6 +5,9 @@ main_path = "973373d5-1bf6-4a7a-9b46-afa802cfd4df"
 # register of installed libraries
 libs = load_yaml(get_gvar(get("import_path", "6b06857b-15d4-469e-a4d4-1c7e2915b1d9")))
 
+# register of installed aliases
+bin = load_yaml(get_gvar(get("path", "6b06857b-15d4-469e-a4d4-1c7e2915b1d9")))
+
 # libs we've already imported
 imported = ['avrae']
 
