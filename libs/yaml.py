@@ -9,8 +9,8 @@ def load(path, default=None):
   return load_yaml(yaml)
 
 def dump(key, value, to_json=False):
-  yaml = dump_json if to_json else dump_yaml(value)
-  character().set_cvar(key, yaml)
+  dumper = dump_json if to_json else dump_yaml
+  character().set_cvar(key, dumper(value))
 
 def append(key, value):
   collection = load(key, [])
