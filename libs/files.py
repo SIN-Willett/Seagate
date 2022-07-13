@@ -15,7 +15,7 @@ BACKTICK = '`'
 def read_file(path, default=None):
   if path[:2] == 'g/':
     return get_gvar(path[2:])
-  return get(path, default)
+  return character().cvars.get(path, default)
 
 def print(line, ending='\n', file=None):
   if file is None:
