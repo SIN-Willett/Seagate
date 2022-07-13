@@ -1,98 +1,43 @@
-!gvar edit 973373d5-1bf6-4a7a-9b46-afa802cfd4df
-from avrae import *
-from stats import *
-from xplog import *
-from files import *
+tembed <drac2>
+# Code for XP
+main_path = "973373d5-1bf6-4a7a-9b46-afa802cfd4df"
 
-<drac2>
-LEVEL_THRESHOLDS = [0,300,900,2700,6500,14000,23000,34000,48000,64000,85000,100000,120000,140000,165000,195000,225000,265000,305000,355000,420000]
+# register of installed libraries
+libs = load_yaml(get_gvar(get("import_path", "6b06857b-15d4-469e-a4d4-1c7e2915b1d9")))
 
-def xp_gain(args):
-  if len(args) < 1:
-    err("set to what?")
-  xp = int(args[0])
-  got = "Gained" if xp >= 0 else "Lost"
+# register of installed aliases
+bin = load_yaml(get_gvar(get("path", "6b06857b-15d4-469e-a4d4-1c7e2915b1d9")))
 
-  msg = f"{got} {max(xp, -xp)}xp" if len(args) == 1 else args[1]
-  log_xp(xp, msg)
+# libs we've already imported
+imported = ['avrae']
 
-  print(f"{character().name} {got.lower()} {xp}xp", '', stdtitle)
+# allows print to work
+stdembed = get_gvar("5c8267a0-ff5f-4468-bd96-53e0567b9c67")
 
-def xp_set(args):
-  if len(args) < 2:
-    err("set to what?")
-  xp = int(args[1])
-  msg = f"Total set to {xp}xp" if len(args) == 2 else args[2]
+def compile_file(filepath):
+  """load a drac containing gvar, if it has import lines add them to the final code"""
+  main = get_gvar(filepath)
+  for line in main.splitlines():
+    if not line:
+      continue
+    if "drac2>" in line:
+      break
+    parts = line.split(' ', 2)
+    cmd, module_name = parts[0], parts[1]
+    if cmd != "from" and cmd != "import":
+      continue
 
-  curr = character().get_cc('Experience')
-  log_xp(xp - curr, msg)
+    if module_name in imported:
+      continue
 
-  print(f"{character().name} set {PRONOUNS[2]} xp to {xp}", '', stdtitle)
+    if module_name in libs:
+      gvar = libs.pop(module_name)
+      imported.append(module_name)
+      main = main.replace(line, compile_file(gvar))
+    else:
+      err(f'''Could not import module : "{module_name}"''')
+  return main
 
-def xp_chart(args):
-  lines = [f'{(i + 1) if i < 20 else " Godwoken":9}: {v:,}' for i, v in enumerate(LEVEL_THRESHOLDS)]
-  out = ['    level: XP Required ', ('-' * 9) + '+' + ('-' * 13)] + lines
-  print(code_block('\n'.join(out), 'yaml'))
-
-def xp_log_view(args):
-  entries_per_page = 40
-  logbook = get_yaml(XPLOG_CVAR_NAME, {})
-  page_count = ceil(len(logbook) / entries_per_page)
-
-  page_num = page_count if len(args) == 1 else int(args[1])
-
-  page_num = min(page_count, max(1, page_num))
-
-  left = entries_per_page * (page_num - 1)
-  right = min(len(logbook), entries_per_page * page_num)
-
-  entries = {k: v for i, (k, v) in enumerate(logbook.items()) if left <= i < right}
-  page = xp_entries_to_str(entries)
-  if not page:
-    page = "(no entries found)"
-  print(f"{character().name} viewed {PRONOUNS[2]} xp log", '', stdtitle)
-  print(code_block(page), '')
-  print(code_block(f"page {page_num}/{page_count}", 'prolog'))
-
-def xp_status():
-  title = f"{character().name} is currently {level}{'st'*(level==1) or 'nd'*(level==2) or 'rd'*(level==3) or 'th'} level!"
-  print(title, '', stdtitle)
-  required = LEVEL_THRESHOLDS[level - 1]
-  next_level = LEVEL_THRESHOLDS[min(level, 20)]
-  xp = get_xp()
-  if required > xp:
-    print(f"Your experience total needs to be at least {required:,} to match your current level!")
-  elif xp >= next_level:
-    print(f"You have levelled up, it's time to update your sheet with your proper experience total and level then {code_line('!update')}")
-  add_field("Current Experience", xp)
-  if xp < LEVEL_THRESHOLDS[-1]:
-    add_field(f"Next Level: {level + 1 if level < 20 else 'Godwoken'}", f"{next_level:,} *({next_level - xp:,} remaining)*")
-  else:
-    add_field(f"Next Level: Godwoken", f"You can now become godwoken, check out: <#885316318138597436>")
-
-def xp_help(args):
-  print(read_file('g/f7193eab-5e5c-4456-af5f-883c6d7e6b04'))
-
-def main(args):
-  args = [x.lower() for x in args]
-  character().create_cc_nx(XP_CC_NAME)
-
-  show_thumb()
-  if not args:
-    xp_status()
-  elif args[0] in "chart":
-    xp_chart(args)
-  elif args[0] in "log":
-    xp_log_view(args)
-    hide_thumb()
-  elif args[0] in "set":
-    xp_set(args)
-  elif args[0] in "help?":
-    xp_help(args)
-  else:
-    xp_gain(args)
-  print("!xp | !xp # | !xp -# | !xp set # | !xp chart | !xp log | !xp help", '', stdfooter)
-
-main(&&&)
+# the final product
+return compile_file(main_path).replace("&&&", "&ARGS&").replace("&STDEMBED&", stdembed)
 </drac2>
-&STDEMBED&
