@@ -1,5 +1,9 @@
 !gvar edit 71c6b483-2502-4009-ab71-fe4ddf500772
-<drac2>
+"""
+Provides a standard way to unify output to the final embed
+and access to files across the various systems
+"""
+
 # global variables, allow printing to the final embed
 stddesc = []
 stdtitle = []
@@ -41,4 +45,13 @@ def show_thumb():
 def hide_thumb():
   stdthumb.clear()
 
-</drac2>
+def stdembed():
+  return f"""
+-title "{flush(stdtitle)}"
+-desc "{flush(stddesc)}"
+{format_fields()}
+-footer "{flush(stdfooter)}
+Written by Omen and Sioryn :)"
+-color <color>
+"{flush(stdthumb)}"
+"""
