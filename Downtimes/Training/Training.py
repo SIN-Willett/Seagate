@@ -52,38 +52,17 @@ if "-b" in args or "-bonus" in args:
     bonus = pars("b", pars("bonus",""))
     mydice += ("+" + bonus + "[bonus]")
 
-bags = load_json(get("bags"))
-i = 0
-for bag in bags:
-    if bag[0] == "Coin Pouch":
-        break
-    i = i + 1
+character().coinpurse.modify_coins(0, -cost)
 
-if i == len(bags):
-    err("you have no coin pouch")
-
-gold = bags[i][1].gp
-platinum = bags[i][1].pp
-
-if (gold < cost) and platinum:
-    bags[i][1]['pp'] = (bags[i][1]['pp'] - 1)
-    bags[i][1]['gp'] = (bags[i][1]['gp'] + 10)
-
-if bags[i][1].gp < cost:
-    err("You only have " + gold + "GP and " + platinum + "PP, you need to have " + cost + "GP <3")
-
-bags[i][1]['gp'] = bags[i][1]['gp'] - cost
-
-total_gold = bags[i][1].gp
-total_platinum = bags[i][1].pp
-character().set_cvar("bags", dump_json(bags))
+total_gp = character().coinpurse.get_coins()["gp"]
+total_pp = character().coinpurse.get_coins()["pp"]
 
 cc = "Progress"
 character().create_cc_nx(cc, 0, actions)
 
 if get("DTtraining") != chosen_training:
     character().set_cc(cc, 0, actions)
-    set_cvar("DTtraining", chosen_training)
+    character().set_cvar("DTtraining", chosen_training)
 if character().get_cc(cc) == actions:
     character().set_cc(cc, 0, actions)
 
@@ -99,23 +78,34 @@ else:
     character().mod_cc(cc, +3)
     xp = 30
 
+xp_table = load_json(get_gvar("1735dc7f-fedd-4d83-8a37-584ca6c55d02"))
+
+exp_cc = "Experience"
+level = level
+next_level = level + 1
+message = ""
+
+if level < 20:
+    if character().get_cc(exp_cc) >= xp_table[str(next_level)]:
+        message = f"\nYou have leveled up to {next_level}!"
+        level = next_level
+
 total_xp = (xp * level)
 xp_args = "" + total_xp + " | Training downtime for " + chosen_training
 if actions == 28:
     xp_args += " expertise"
 
-exp_cc = "Experience"
 xplog = load_json(get('xplog','{}'))
 timestamp = get("Timestamp")
 xplog.update({timestamp:xp_args})
-set_cvar('xplog',dump_json(xplog))
-mod_cc(exp_cc,total_xp)
+character().set_cvar('xplog',dump_json(xplog))
+character().mod_cc(exp_cc,total_xp)
 
-char_xp = get_cc(exp_cc)
+char_xp = character().get_cc(exp_cc)
 
 checktitle = f' does the training downtime for {chosen_training}'
 response = f'Your current progress on {chosen_training} is {character().get_cc(cc)}/{actions}! | You gain {xp} * {level} = {total_xp} XP!'
-coin_response = f"Training cost {cost} GP, you now have {total_gold} GP and {total_platinum} PP remaining in your Coin Pouch."
+coin_response = f"Training cost {cost} GP, you now have {total_gp} GP and {total_pp} PP remaining in your Coin Pouch."
 xplog_response = f"You now have {char_xp} XP and your most recent xplog entry will be:"
 </drac2>
 -title "{{name}}{{checktitle}}"
@@ -123,7 +113,7 @@ xplog_response = f"You now have {char_xp} XP and your most recent xplog entry wi
 -footer "{{response}}
 
 {{coin_response}}
-
+{{message}}
 {{xplog_response}}
 {{timestamp}}: {{xp_args}}
 
